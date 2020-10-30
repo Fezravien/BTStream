@@ -1,24 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A1G-aV-AA7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--캘린더-->
+        <scene sceneID="Yum-3Z-vaJ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController title="캘린더" id="D2S-0a-Qrp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="veQ-Qf-Ocv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="j7j-1g-kuT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="캘린더" image="calendar" catalog="system" id="j9W-FJ-Bce"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Gs-DQ-elY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="143" y="11"/>
+        </scene>
+        <!--피드-->
+        <scene sceneID="vGk-UE-nzG">
+            <objects>
+                <viewController title="피드" id="UTv-A3-lu5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sne-l9-0fq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cSK-OG-xyv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="피드" image="list.bullet.below.rectangle" catalog="system" id="0w7-0s-zbr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pB6-3i-H1Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2258" y="11"/>
+        </scene>
+        <!--설정-->
+        <scene sceneID="bbD-ir-tKF">
+            <objects>
+                <viewController title="설정" id="san-he-EtK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OMH-D2-vHc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3uP-Ft-eB4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="설정" image="gearshape" catalog="system" id="9fk-DW-oMa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="778-vF-cu3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3296" y="11"/>
+        </scene>
+        <!--홈-->
+        <scene sceneID="rXQ-fl-MYS">
+            <objects>
+                <viewController title="홈" id="0j7-4a-mjy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n6M-XV-SXU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="946"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9iW-Vi-IUG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="홈" image="homekit" catalog="system" id="uJR-cm-bfr"/>
+                    <size key="freeformSize" width="414" height="1000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ne-Sh-000" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1610" y="11"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZQ2-5q-BZc">
+            <objects>
+                <viewController id="A1G-aV-AA7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ULe-UO-sYK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="60F-4H-zJ0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="HpF-Q9-9K9" kind="show" identifier="segue_login" id="rkn-bZ-OUK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nxT-zU-j7N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-451" y="-820"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="NDW-7S-XL2">
+            <objects>
+                <tabBarController id="HpF-Q9-9K9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gtA-5G-M4b"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VYy-gF-0pD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0j7-4a-mjy" kind="relationship" relationship="viewControllers" id="s78-qh-hd9"/>
+                        <segue destination="D2S-0a-Qrp" kind="relationship" relationship="viewControllers" id="cIo-GO-na6"/>
+                        <segue destination="2GH-FJ-qLF" kind="relationship" relationship="viewControllers" id="doy-0T-mrO"/>
+                        <segue destination="UTv-A3-lu5" kind="relationship" relationship="viewControllers" id="P1v-z8-v9x"/>
+                        <segue destination="san-he-EtK" kind="relationship" relationship="viewControllers" id="Nbz-FH-srF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="41j-O5-uaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="-820"/>
+        </scene>
+        <!--기사-->
+        <scene sceneID="Q7s-u6-XUO">
+            <objects>
+                <viewController title="기사" id="2GH-FJ-qLF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rIC-dt-wR1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="C7p-pW-CTj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="기사" image="newspaper" catalog="system" id="EOy-vL-wlS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="seR-Pi-35E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="11"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="list.bullet.below.rectangle" catalog="system" width="128" height="112"/>
+        <image name="newspaper" catalog="system" width="128" height="108"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

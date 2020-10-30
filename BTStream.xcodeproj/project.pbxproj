@@ -13,6 +13,12 @@
 		BAD86A73254BFF9E009351AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD86A71254BFF9E009351AE /* Main.storyboard */; };
 		BAD86A75254BFFA0009351AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD86A74254BFFA0009351AE /* Assets.xcassets */; };
 		BAD86A78254BFFA0009351AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD86A76254BFFA0009351AE /* LaunchScreen.storyboard */; };
+		BAD86A81254C36E3009351AE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD86A80254C36E3009351AE /* LoginViewController.swift */; };
+		BAD86A84254C36F6009351AE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD86A83254C36F6009351AE /* HomeViewController.swift */; };
+		BAD86A8B254C3723009351AE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD86A8A254C3723009351AE /* CalendarViewController.swift */; };
+		BAD86A8E254C372D009351AE /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD86A8D254C372D009351AE /* NewsViewController.swift */; };
+		BAD86A91254C373D009351AE /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD86A90254C373D009351AE /* FeedViewController.swift */; };
+		BAD86A94254C3755009351AE /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD86A93254C3755009351AE /* SetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		BAD86A74254BFFA0009351AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAD86A77254BFFA0009351AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAD86A79254BFFA0009351AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAD86A80254C36E3009351AE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BAD86A83254C36F6009351AE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BAD86A8A254C3723009351AE /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		BAD86A8D254C372D009351AE /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		BAD86A90254C373D009351AE /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		BAD86A93254C3755009351AE /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,12 @@
 				BAD86A6D254BFF9E009351AE /* SceneDelegate.swift */,
 				BAD86A6F254BFF9E009351AE /* ViewController.swift */,
 				BAD86A71254BFF9E009351AE /* Main.storyboard */,
+				BAD86A80254C36E3009351AE /* LoginViewController.swift */,
+				BAD86A83254C36F6009351AE /* HomeViewController.swift */,
+				BAD86A8A254C3723009351AE /* CalendarViewController.swift */,
+				BAD86A8D254C372D009351AE /* NewsViewController.swift */,
+				BAD86A90254C373D009351AE /* FeedViewController.swift */,
+				BAD86A93254C3755009351AE /* SetViewController.swift */,
 				BAD86A74254BFFA0009351AE /* Assets.xcassets */,
 				BAD86A76254BFFA0009351AE /* LaunchScreen.storyboard */,
 				BAD86A79254BFFA0009351AE /* Info.plist */,
@@ -137,8 +155,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAD86A8B254C3723009351AE /* CalendarViewController.swift in Sources */,
+				BAD86A94254C3755009351AE /* SetViewController.swift in Sources */,
+				BAD86A84254C36F6009351AE /* HomeViewController.swift in Sources */,
+				BAD86A81254C36E3009351AE /* LoginViewController.swift in Sources */,
 				BAD86A70254BFF9E009351AE /* ViewController.swift in Sources */,
+				BAD86A8E254C372D009351AE /* NewsViewController.swift in Sources */,
 				BAD86A6C254BFF9E009351AE /* AppDelegate.swift in Sources */,
+				BAD86A91254C373D009351AE /* FeedViewController.swift in Sources */,
 				BAD86A6E254BFF9E009351AE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
