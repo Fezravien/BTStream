@@ -80,6 +80,13 @@
                     <view key="view" contentMode="scaleToFill" id="ULe-UO-sYK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VDT-At-cGI">
+                                <rect key="frame" x="67" y="233" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="60F-4H-zJ0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -136,6 +143,9 @@
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="list.bullet.below.rectangle" catalog="system" width="128" height="112"/>
         <image name="newspaper" catalog="system" width="128" height="108"/>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
