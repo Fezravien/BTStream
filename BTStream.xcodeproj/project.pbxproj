@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26FA4C57254EA5A40008BA7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26FA4C56254EA5A40008BA7F /* GoogleService-Info.plist */; };
 		42C3C4DA6A9E42AF6C4D2DF2 /* Pods_BTStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582B6320DB86866A69DC5092 /* Pods_BTStream.framework */; };
 		BAD86A6C254BFF9E009351AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD86A6B254BFF9E009351AE /* AppDelegate.swift */; };
 		BAD86A6E254BFF9E009351AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD86A6D254BFF9E009351AE /* SceneDelegate.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		26FA4C46254EA1330008BA7F /* BTStream.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BTStream.entitlements; sourceTree = "<group>"; };
+		26FA4C56254EA5A40008BA7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4E60555D6E6B80330CF0F03B /* Pods-BTStream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BTStream.debug.xcconfig"; path = "Target Support Files/Pods-BTStream/Pods-BTStream.debug.xcconfig"; sourceTree = "<group>"; };
 		582B6320DB86866A69DC5092 /* Pods_BTStream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BTStream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FB4E359588B60BE1D32138 /* Pods-BTStream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BTStream.release.xcconfig"; path = "Target Support Files/Pods-BTStream/Pods-BTStream.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				BAD86A8D254C372D009351AE /* NewsViewController.swift */,
 				BAD86A90254C373D009351AE /* FeedViewController.swift */,
 				BAD86A93254C3755009351AE /* SetViewController.swift */,
+				26FA4C56254EA5A40008BA7F /* GoogleService-Info.plist */,
 				BAD86A74254BFFA0009351AE /* Assets.xcassets */,
 				BAD86A76254BFFA0009351AE /* LaunchScreen.storyboard */,
 				BAD86A79254BFFA0009351AE /* Info.plist */,
@@ -108,7 +111,6 @@
 				4E60555D6E6B80330CF0F03B /* Pods-BTStream.debug.xcconfig */,
 				A7FB4E359588B60BE1D32138 /* Pods-BTStream.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -173,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD86A78254BFFA0009351AE /* LaunchScreen.storyboard in Resources */,
+				26FA4C57254EA5A40008BA7F /* GoogleService-Info.plist in Resources */,
 				BAD86A75254BFFA0009351AE /* Assets.xcassets in Resources */,
 				BAD86A73254BFF9E009351AE /* Main.storyboard in Resources */,
 			);
