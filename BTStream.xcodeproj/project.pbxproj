@@ -11,7 +11,6 @@
 		42C3C4DA6A9E42AF6C4D2DF2 /* Pods_BTStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582B6320DB86866A69DC5092 /* Pods_BTStream.framework */; };
 		BAD86A6C254BFF9E009351AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD86A6B254BFF9E009351AE /* AppDelegate.swift */; };
 		BAD86A6E254BFF9E009351AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD86A6D254BFF9E009351AE /* SceneDelegate.swift */; };
-		BAD86A70254BFF9E009351AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD86A6F254BFF9E009351AE /* ViewController.swift */; };
 		BAD86A73254BFF9E009351AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD86A71254BFF9E009351AE /* Main.storyboard */; };
 		BAD86A75254BFFA0009351AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD86A74254BFFA0009351AE /* Assets.xcassets */; };
 		BAD86A78254BFFA0009351AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD86A76254BFFA0009351AE /* LaunchScreen.storyboard */; };
@@ -32,7 +31,6 @@
 		BAD86A68254BFF9E009351AE /* BTStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BTStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD86A6B254BFF9E009351AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAD86A6D254BFF9E009351AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BAD86A6F254BFF9E009351AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BAD86A72254BFF9E009351AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAD86A74254BFFA0009351AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAD86A77254BFFA0009351AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 				26FA4C46254EA1330008BA7F /* BTStream.entitlements */,
 				BAD86A6B254BFF9E009351AE /* AppDelegate.swift */,
 				BAD86A6D254BFF9E009351AE /* SceneDelegate.swift */,
-				BAD86A6F254BFF9E009351AE /* ViewController.swift */,
 				BAD86A71254BFF9E009351AE /* Main.storyboard */,
 				BAD86A80254C36E3009351AE /* LoginViewController.swift */,
 				BAD86A83254C36F6009351AE /* HomeViewController.swift */,
@@ -251,7 +248,6 @@
 				BAD86A94254C3755009351AE /* SetViewController.swift in Sources */,
 				BAD86A84254C36F6009351AE /* HomeViewController.swift in Sources */,
 				BAD86A81254C36E3009351AE /* LoginViewController.swift in Sources */,
-				BAD86A70254BFF9E009351AE /* ViewController.swift in Sources */,
 				BAD86A8E254C372D009351AE /* NewsViewController.swift in Sources */,
 				BAD86A6C254BFF9E009351AE /* AppDelegate.swift in Sources */,
 				BAD86A91254C373D009351AE /* FeedViewController.swift in Sources */,
