@@ -188,6 +188,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import AuthenticationServices;
 @import UIKit;
 #endif
 
@@ -242,9 +243,18 @@ SWIFT_CLASS("_TtC8BTStream18HomeViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIStackView;
+@class ASAuthorizationController;
+@class ASAuthorization;
 
 SWIFT_CLASS("_TtC8BTStream19LoginViewController")
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController <ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding>
+@property (nonatomic, weak) IBOutlet UIStackView * _Null_unspecified appleSignInButton;
+- (void)appleSignInButtonPress;
+- (ASPresentationAnchor _Nonnull)presentationAnchorForAuthorizationController:(ASAuthorizationController * _Nonnull)controller SWIFT_WARN_UNUSED_RESULT;
+- (void)authorizationController:(ASAuthorizationController * _Nonnull)controller didCompleteWithAuthorization:(ASAuthorization * _Nonnull)authorization;
+- (void)authorizationController:(ASAuthorizationController * _Nonnull)controller didCompleteWithError:(NSError * _Nonnull)error;
+- (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
