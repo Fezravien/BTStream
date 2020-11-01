@@ -188,6 +188,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import AuthenticationServices;
+@import Foundation;
+@import GoogleSignIn;
 @import UIKit;
 #endif
 
@@ -206,13 +209,17 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class GIDSignIn;
+@class GIDGoogleUser;
 @class UIApplication;
 @class UISceneSession;
 @class UISceneConnectionOptions;
 @class UISceneConfiguration;
 
 SWIFT_CLASS("_TtC8BTStream11AppDelegate")
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <GIDSignInDelegate, UIApplicationDelegate>
+- (void)signIn:(GIDSignIn * _Null_unspecified)signIn didSignInForUser:(GIDGoogleUser * _Null_unspecified)user withError:(NSError * _Null_unspecified)error;
+- (BOOL)application:(UIApplication * _Nonnull)application openURL:(NSURL * _Nonnull)url sourceApplication:(NSString * _Nullable)sourceApplication annotation:(id _Nonnull)annotation SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)application:(UIApplication * _Nonnull)application didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions SWIFT_WARN_UNUSED_RESULT;
 - (UISceneConfiguration * _Nonnull)application:(UIApplication * _Nonnull)application configurationForConnectingSceneSession:(UISceneSession * _Nonnull)connectingSceneSession options:(UISceneConnectionOptions * _Nonnull)options SWIFT_WARN_UNUSED_RESULT;
 - (void)application:(UIApplication * _Nonnull)application didDiscardSceneSessions:(NSSet<UISceneSession *> * _Nonnull)sceneSessions;
@@ -242,9 +249,22 @@ SWIFT_CLASS("_TtC8BTStream18HomeViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIStackView;
+@class GIDSignInButton;
+@class ASAuthorizationController;
+@class ASAuthorization;
 
 SWIFT_CLASS("_TtC8BTStream19LoginViewController")
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController <ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding, GIDSignInDelegate>
+@property (nonatomic, weak) IBOutlet UIStackView * _Null_unspecified appleSignInButton;
+@property (nonatomic, weak) IBOutlet GIDSignInButton * _Null_unspecified googleSignInButton;
+- (void)signIn:(GIDSignIn * _Null_unspecified)signIn didSignInForUser:(GIDGoogleUser * _Null_unspecified)user withError:(NSError * _Null_unspecified)error;
+- (void)signIn:(GIDSignIn * _Null_unspecified)signIn didDisconnectWithUser:(GIDGoogleUser * _Null_unspecified)user withError:(NSError * _Null_unspecified)error;
+- (void)appleSignInButtonPress;
+- (ASPresentationAnchor _Nonnull)presentationAnchorForAuthorizationController:(ASAuthorizationController * _Nonnull)controller SWIFT_WARN_UNUSED_RESULT;
+- (void)authorizationController:(ASAuthorizationController * _Nonnull)controller didCompleteWithAuthorization:(ASAuthorization * _Nonnull)authorization;
+- (void)authorizationController:(ASAuthorizationController * _Nonnull)controller didCompleteWithError:(NSError * _Nonnull)error;
+- (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -258,11 +278,13 @@ SWIFT_CLASS("_TtC8BTStream18NewsViewController")
 
 @class UIWindow;
 @class UIScene;
+@class UIOpenURLContext;
 
 SWIFT_CLASS("_TtC8BTStream13SceneDelegate")
 @interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
 @property (nonatomic, strong) UIWindow * _Nullable window;
 - (void)scene:(UIScene * _Nonnull)scene willConnectToSession:(UISceneSession * _Nonnull)session options:(UISceneConnectionOptions * _Nonnull)connectionOptions;
+- (void)scene:(UIScene * _Nonnull)scene openURLContexts:(NSSet<UIOpenURLContext *> * _Nonnull)URLContexts;
 - (void)sceneDidDisconnect:(UIScene * _Nonnull)scene;
 - (void)sceneDidBecomeActive:(UIScene * _Nonnull)scene;
 - (void)sceneWillResignActive:(UIScene * _Nonnull)scene;
