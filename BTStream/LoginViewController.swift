@@ -6,6 +6,19 @@
 //
 
 import UIKit
+
+class LoginViewController: UIViewController {
+    
+    @IBAction func loginBtn(_ sender: Any) {
+        guard let tb = storyboard?.instantiateViewController(identifier: "tabBar") else {
+            return
+        }
+        
+        tb.modalPresentationStyle = .fullScreen
+        
+        present(tb, animated: true, completion: nil)
+    }
+}
 //import AuthenticationServices
 //import GoogleSignIn
 

@@ -15,11 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate// GIDSignInDelegate
 //    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
 ////
 //    }
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return false
-        //GIDSignIn.sharedInstance().handle(url)
-    
-}
+//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+//        return true
+//        //GIDSignIn.sharedInstance().handle(url)
+//
+//}
 
 
 

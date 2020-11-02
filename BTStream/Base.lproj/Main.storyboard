@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A1G-aV-AA7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nAm-3g-E1B">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController title="캘린더" id="D2S-0a-Qrp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="veQ-Qf-Ocv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="j7j-1g-kuT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -29,7 +29,7 @@
             <objects>
                 <viewController title="피드" id="UTv-A3-lu5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sne-l9-0fq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="cSK-OG-xyv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -45,7 +45,7 @@
             <objects>
                 <viewController title="설정" id="san-he-EtK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OMH-D2-vHc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="3uP-Ft-eB4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -59,9 +59,9 @@
         <!--홈-->
         <scene sceneID="rXQ-fl-MYS">
             <objects>
-                <viewController title="홈" id="0j7-4a-mjy" sceneMemberID="viewController">
+                <viewController title="홈" id="0j7-4a-mjy" customClass="HomeViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n6M-XV-SXU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="946"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="9iW-Vi-IUG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -73,35 +73,39 @@
             </objects>
             <point key="canvasLocation" x="-1610" y="11"/>
         </scene>
-        <!--Login View Controller-->
-        <scene sceneID="ZQ2-5q-BZc">
+        <!--로그인-->
+        <scene sceneID="3JF-8t-Rhw">
             <objects>
-                <viewController id="A1G-aV-AA7" customClass="LoginViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ULe-UO-sYK">
+                <viewController title="로그인" id="nAm-3g-E1B" customClass="LoginViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aSm-vo-nhj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qe1-30-mfN">
-                                <rect key="frame" x="168" y="403" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xe5-70-9IY">
+                                <rect key="frame" x="168" y="429" width="78" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="HpF-Q9-9K9" kind="show" id="J5w-n6-ZR8"/>
+                                    <action selector="loginBtn:" destination="nAm-3g-E1B" eventType="touchUpInside" id="ERG-kV-cSK"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="60F-4H-zJ0"/>
+                        <viewLayoutGuide key="safeArea" id="8y4-PX-oqm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xe5-70-9IY" firstAttribute="centerY" secondItem="8y4-PX-oqm" secondAttribute="centerY" id="ZnZ-ec-Dak"/>
+                            <constraint firstItem="Xe5-70-9IY" firstAttribute="centerX" secondItem="8y4-PX-oqm" secondAttribute="centerX" id="osW-3Z-R03"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nxT-zU-j7N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JVp-mo-2eG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-452.17391304347831" y="-820.3125"/>
+            <point key="canvasLocation" x="-395" y="-833"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--탭바-->
         <scene sceneID="NDW-7S-XL2">
             <objects>
-                <tabBarController id="HpF-Q9-9K9" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" title="탭바" id="HpF-Q9-9K9" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gtA-5G-M4b"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VYy-gF-0pD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -125,7 +129,7 @@
             <objects>
                 <viewController title="기사" id="2GH-FJ-qLF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rIC-dt-wR1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="C7p-pW-CTj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
