@@ -16,6 +16,15 @@
                     <view key="view" contentMode="scaleToFill" id="veQ-Qf-Ocv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="캘린더" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8in-nj-Ejm">
+                                <rect key="frame" x="218" y="152" width="45" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="j7j-1g-kuT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -23,7 +32,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gs-DQ-elY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="143" y="11"/>
+            <point key="canvasLocation" x="1052.1739130434783" y="10.714285714285714"/>
         </scene>
         <!--피드-->
         <scene sceneID="vGk-UE-nzG">
@@ -32,6 +41,15 @@
                     <view key="view" contentMode="scaleToFill" id="Sne-l9-0fq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="피드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXm-Ox-eiI">
+                                <rect key="frame" x="46" y="252" width="30" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cSK-OG-xyv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -39,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pB6-3i-H1Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2258" y="11"/>
+            <point key="canvasLocation" x="3168.115942028986" y="10.714285714285714"/>
         </scene>
         <!--설정-->
         <scene sceneID="bbD-ir-tKF">
@@ -48,6 +66,15 @@
                     <view key="view" contentMode="scaleToFill" id="OMH-D2-vHc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFC-uh-Lka">
+                                <rect key="frame" x="241" y="225" width="30" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3uP-Ft-eB4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -55,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="778-vF-cu3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3296" y="11"/>
+            <point key="canvasLocation" x="4205.7971014492759" y="10.714285714285714"/>
         </scene>
         <!--홈-->
         <scene sceneID="rXQ-fl-MYS">
@@ -65,6 +92,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+
                             <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="eaH-yj-Tli" userLabel="TopLogoView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                 <subviews>
@@ -174,10 +202,12 @@
                                     <constraint firstItem="oE2-qK-qnB" firstAttribute="top" secondItem="7Na-Mu-EVx" secondAttribute="top" constant="20" id="zCd-KT-0H3"/>
                                 </constraints>
                             </scrollView>
+
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9iW-Vi-IUG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+
                             <constraint firstItem="eaH-yj-Tli" firstAttribute="leading" secondItem="9iW-Vi-IUG" secondAttribute="leading" id="2Yj-8w-5il"/>
                             <constraint firstItem="9iW-Vi-IUG" firstAttribute="bottom" secondItem="7Na-Mu-EVx" secondAttribute="bottom" priority="250" constant="1" id="WfC-VX-Kdt"/>
                             <constraint firstItem="9iW-Vi-IUG" firstAttribute="top" secondItem="mMA-3x-cFN" secondAttribute="top" constant="10" id="aD3-3b-kkP"/>
@@ -195,6 +225,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ne-Sh-000" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1610.144927536232" y="10.714285714285714"/>
+\
         </scene>
         <!--로그인-->
         <scene sceneID="3JF-8t-Rhw">
@@ -236,7 +267,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="0j7-4a-mjy" kind="relationship" relationship="viewControllers" id="s78-qh-hd9"/>
+                        <segue destination="MkK-Im-hNJ" kind="relationship" relationship="viewControllers" id="s78-qh-hd9"/>
                         <segue destination="D2S-0a-Qrp" kind="relationship" relationship="viewControllers" id="cIo-GO-na6"/>
                         <segue destination="2GH-FJ-qLF" kind="relationship" relationship="viewControllers" id="doy-0T-mrO"/>
                         <segue destination="UTv-A3-lu5" kind="relationship" relationship="viewControllers" id="P1v-z8-v9x"/>
@@ -254,6 +285,15 @@
                     <view key="view" contentMode="scaleToFill" id="rIC-dt-wR1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="기사" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mW-E6-GgO">
+                                <rect key="frame" x="204" y="310" width="30" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="C7p-pW-CTj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -261,7 +301,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seR-Pi-35E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1216" y="11"/>
+            <point key="canvasLocation" x="2126.0869565217395" y="10.714285714285714"/>
+        </scene>
+        <!--홈-->
+        <scene sceneID="cpG-x9-rea">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MkK-Im-hNJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="홈" image="homekit" catalog="system" id="uJR-cm-bfr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mpZ-qc-PBF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0j7-4a-mjy" kind="relationship" relationship="rootViewController" id="elR-CV-MaX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqa-M8-hLz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1610.144927536232" y="10.714285714285714"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1Ez-gz-epg">
