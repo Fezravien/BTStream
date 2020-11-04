@@ -16,15 +16,6 @@
                     <view key="view" contentMode="scaleToFill" id="veQ-Qf-Ocv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="캘린더" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8in-nj-Ejm">
-                                <rect key="frame" x="218" y="152" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="j7j-1g-kuT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -32,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gs-DQ-elY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052.1739130434783" y="10.714285714285714"/>
+            <point key="canvasLocation" x="1020" y="11"/>
         </scene>
         <!--피드-->
         <scene sceneID="vGk-UE-nzG">
@@ -41,15 +32,6 @@
                     <view key="view" contentMode="scaleToFill" id="Sne-l9-0fq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="피드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXm-Ox-eiI">
-                                <rect key="frame" x="46" y="252" width="30" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cSK-OG-xyv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -66,15 +48,6 @@
                     <view key="view" contentMode="scaleToFill" id="OMH-D2-vHc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFC-uh-Lka">
-                                <rect key="frame" x="241" y="225" width="30" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3uP-Ft-eB4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -89,10 +62,9 @@
             <objects>
                 <viewController title="홈" id="0j7-4a-mjy" customClass="HomeViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n6M-XV-SXU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
                             <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="eaH-yj-Tli" userLabel="TopLogoView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                 <subviews>
@@ -113,7 +85,7 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Na-Mu-EVx">
-                                <rect key="frame" x="0.0" y="80" width="414" height="670"/>
+                                <rect key="frame" x="0.0" y="80" width="414" height="732"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oE2-qK-qnB" userLabel="맴버">
                                         <rect key="frame" x="0.0" y="20" width="414" height="80"/>
@@ -202,12 +174,10 @@
                                     <constraint firstItem="oE2-qK-qnB" firstAttribute="top" secondItem="7Na-Mu-EVx" secondAttribute="top" constant="20" id="zCd-KT-0H3"/>
                                 </constraints>
                             </scrollView>
-
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9iW-Vi-IUG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-
                             <constraint firstItem="eaH-yj-Tli" firstAttribute="leading" secondItem="9iW-Vi-IUG" secondAttribute="leading" id="2Yj-8w-5il"/>
                             <constraint firstItem="9iW-Vi-IUG" firstAttribute="bottom" secondItem="7Na-Mu-EVx" secondAttribute="bottom" priority="250" constant="1" id="WfC-VX-Kdt"/>
                             <constraint firstItem="9iW-Vi-IUG" firstAttribute="top" secondItem="mMA-3x-cFN" secondAttribute="top" constant="10" id="aD3-3b-kkP"/>
@@ -219,13 +189,11 @@
                             <constraint firstItem="7Na-Mu-EVx" firstAttribute="leading" secondItem="9iW-Vi-IUG" secondAttribute="leading" id="wKm-sJ-zgG"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="홈" image="homekit" catalog="system" id="uJR-cm-bfr"/>
-                    <size key="freeformSize" width="414" height="800"/>
+                    <tabBarItem key="tabBarItem" title="홈" image="homekit" catalog="system" id="SBd-SK-lnU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ne-Sh-000" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1610.144927536232" y="10.714285714285714"/>
-\
         </scene>
         <!--로그인-->
         <scene sceneID="3JF-8t-Rhw">
@@ -267,11 +235,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="MkK-Im-hNJ" kind="relationship" relationship="viewControllers" id="s78-qh-hd9"/>
-                        <segue destination="D2S-0a-Qrp" kind="relationship" relationship="viewControllers" id="cIo-GO-na6"/>
-                        <segue destination="2GH-FJ-qLF" kind="relationship" relationship="viewControllers" id="doy-0T-mrO"/>
-                        <segue destination="UTv-A3-lu5" kind="relationship" relationship="viewControllers" id="P1v-z8-v9x"/>
-                        <segue destination="san-he-EtK" kind="relationship" relationship="viewControllers" id="Nbz-FH-srF"/>
+                        <segue destination="0j7-4a-mjy" kind="relationship" relationship="viewControllers" id="hpD-Az-fIB"/>
+                        <segue destination="D2S-0a-Qrp" kind="relationship" relationship="viewControllers" id="TGg-qb-mdb"/>
+                        <segue destination="2GH-FJ-qLF" kind="relationship" relationship="viewControllers" id="WmV-6Q-niV"/>
+                        <segue destination="UTv-A3-lu5" kind="relationship" relationship="viewControllers" id="SVG-8v-Axo"/>
+                        <segue destination="san-he-EtK" kind="relationship" relationship="viewControllers" id="hPW-Fh-d4k"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41j-O5-uaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -285,15 +253,6 @@
                     <view key="view" contentMode="scaleToFill" id="rIC-dt-wR1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="기사" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mW-E6-GgO">
-                                <rect key="frame" x="204" y="310" width="30" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="C7p-pW-CTj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -302,25 +261,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seR-Pi-35E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2126.0869565217395" y="10.714285714285714"/>
-        </scene>
-        <!--홈-->
-        <scene sceneID="cpG-x9-rea">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MkK-Im-hNJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="홈" image="homekit" catalog="system" id="uJR-cm-bfr"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mpZ-qc-PBF">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="0j7-4a-mjy" kind="relationship" relationship="rootViewController" id="elR-CV-MaX"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aqa-M8-hLz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1610.144927536232" y="10.714285714285714"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1Ez-gz-epg">
@@ -359,6 +299,7 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="RC3-AR-QhW" secondAttribute="trailing" id="UDB-GA-kiZ"/>
                                             <constraint firstItem="RC3-AR-QhW" firstAttribute="top" secondItem="RNf-Ci-OVx" secondAttribute="top" id="YPf-oi-KwN"/>
@@ -387,10 +328,10 @@
             </objects>
             <point key="canvasLocation" x="-846" y="-230"/>
         </scene>
-        <!--View Controller-->
+        <!--홈1-->
         <scene sceneID="3Yi-mC-75p">
             <objects>
-                <viewController id="XoZ-pA-dLg" sceneMemberID="viewController">
+                <viewController id="XoZ-pA-dLg" userLabel="홈1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KgR-eb-vaM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -434,6 +375,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="mhc-UT-dOZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="li1-Dy-YNc" firstAttribute="leading" secondItem="KgR-eb-vaM" secondAttribute="leading" id="CMQ-jr-Lwg"/>
@@ -450,10 +392,10 @@
             </objects>
             <point key="canvasLocation" x="-704.34782608695662" y="-69.642857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--홈2-->
         <scene sceneID="IJa-1n-xxb">
             <objects>
-                <viewController id="TPY-TO-yi5" sceneMemberID="viewController">
+                <viewController id="TPY-TO-yi5" userLabel="홈2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EYV-cw-a1p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -497,6 +439,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="753-sn-wiB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ctd-wl-YNI" firstAttribute="top" secondItem="EYV-cw-a1p" secondAttribute="top" constant="40" id="AgZ-Be-Nzj"/>
@@ -513,10 +456,10 @@
             </objects>
             <point key="canvasLocation" x="-704.34782608695662" y="101.78571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--홈3-->
         <scene sceneID="fdj-FX-DGf">
             <objects>
-                <viewController id="0oT-Up-KqA" sceneMemberID="viewController">
+                <viewController id="0oT-Up-KqA" userLabel="홈3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ydy-qC-Kfx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -560,6 +503,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="YjV-0V-qyZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Uyb-do-Fez" secondAttribute="bottom" id="0Vh-uQ-v4T"/>
