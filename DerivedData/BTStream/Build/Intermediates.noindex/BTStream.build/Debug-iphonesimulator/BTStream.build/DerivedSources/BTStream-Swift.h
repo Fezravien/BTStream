@@ -238,6 +238,7 @@ SWIFT_CLASS("_TtC8BTStream18FeedViewController")
 
 SWIFT_CLASS("_TtC8BTStream18HomeViewController")
 @interface HomeViewController : UIViewController
+- (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -245,6 +246,7 @@ SWIFT_CLASS("_TtC8BTStream18HomeViewController")
 
 SWIFT_CLASS("_TtC8BTStream19LoginViewController")
 @interface LoginViewController : UIViewController
+- (IBAction)loginBtn:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -258,11 +260,13 @@ SWIFT_CLASS("_TtC8BTStream18NewsViewController")
 
 @class UIWindow;
 @class UIScene;
+@class UIOpenURLContext;
 
 SWIFT_CLASS("_TtC8BTStream13SceneDelegate")
 @interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
 @property (nonatomic, strong) UIWindow * _Nullable window;
 - (void)scene:(UIScene * _Nonnull)scene willConnectToSession:(UISceneSession * _Nonnull)session options:(UISceneConnectionOptions * _Nonnull)connectionOptions;
+- (void)scene:(UIScene * _Nonnull)scene openURLContexts:(NSSet<UIOpenURLContext *> * _Nonnull)URLContexts;
 - (void)sceneDidDisconnect:(UIScene * _Nonnull)scene;
 - (void)sceneDidBecomeActive:(UIScene * _Nonnull)scene;
 - (void)sceneWillResignActive:(UIScene * _Nonnull)scene;
@@ -274,14 +278,6 @@ SWIFT_CLASS("_TtC8BTStream13SceneDelegate")
 
 SWIFT_CLASS("_TtC8BTStream17SetViewController")
 @interface SetViewController : UIViewController
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC8BTStream14ViewController")
-@interface ViewController : UIViewController
-- (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

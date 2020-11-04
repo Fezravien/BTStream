@@ -6,6 +6,7 @@
 //
 
 import UIKit
+//import GoogleSignIn
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -19,6 +20,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+//        guard let scheme = URLContexts.first?.url.scheme else { return }
+//        if scheme.contains("com.googleusercontent.apps") {
+//            GIDSignIn.sharedInstance().handle(URLContexts.first?.url)
+//        }
+    }
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

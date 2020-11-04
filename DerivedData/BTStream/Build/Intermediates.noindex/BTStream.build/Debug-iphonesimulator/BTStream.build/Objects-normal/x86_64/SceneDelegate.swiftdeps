@@ -16,6 +16,8 @@ provides-dynamic-lookup:
 depends-top-level:
 - "CastingPrecedence"
 - "SceneDelegate"
+- "Set"
+- "UIOpenURLContext"
 - "UIResponder"
 - "UIScene"
 - "UISceneSession"
@@ -93,6 +95,8 @@ depends-member:
 - ["s25LosslessStringConvertibleP", ""]
 - ["So8NSCodingP", ""]
 - ["So8NSObjectC", "ConnectionOptions"]
+- ["So8NSObjectC", "Set"]
+- ["So8NSObjectC", "UIOpenURLContext"]
 - ["So8NSObjectC", "UIScene"]
 - ["So8NSObjectC", "UISceneSession"]
 - ["So8NSObjectC", "UIWindow"]
@@ -110,6 +114,8 @@ depends-member:
 - ["So8NSObjectC", "window"]
 - ["So8NSObjectC", "windowScene"]
 - ["So8NSObjectP", "ConnectionOptions"]
+- ["So8NSObjectP", "Set"]
+- ["So8NSObjectP", "UIOpenURLContext"]
 - ["So8NSObjectP", "UIScene"]
 - ["So8NSObjectP", "UISceneSession"]
 - ["So8NSObjectP", "UIWindow"]
@@ -127,6 +133,8 @@ depends-member:
 - ["So8NSObjectP", "stateRestorationActivityForScene"]
 - ["So8NSObjectP", "window"]
 - ["So8NSObjectP", "windowScene"]
+- ["8BTStream13SceneDelegateC", "Set"]
+- ["8BTStream13SceneDelegateC", "UIOpenURLContext"]
 - ["8BTStream13SceneDelegateC", "UIScene"]
 - ["8BTStream13SceneDelegateC", "UISceneSession"]
 - ["8BTStream13SceneDelegateC", "UIWindow"]
@@ -149,6 +157,8 @@ depends-member:
 - ["s20TextOutputStreamableP", ""]
 - ["So18UIFocusEnvironmentP", ""]
 - ["So30UIPasteConfigurationSupportingP", "ConnectionOptions"]
+- ["So30UIPasteConfigurationSupportingP", "Set"]
+- ["So30UIPasteConfigurationSupportingP", "UIOpenURLContext"]
 - ["So30UIPasteConfigurationSupportingP", "UIScene"]
 - ["So30UIPasteConfigurationSupportingP", "UISceneSession"]
 - ["So30UIPasteConfigurationSupportingP", "UIWindow"]
@@ -167,6 +177,8 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "window"]
 - ["So30UIPasteConfigurationSupportingP", "windowScene"]
 - ["So11UIResponderC", "ConnectionOptions"]
+- ["So11UIResponderC", "Set"]
+- ["So11UIResponderC", "UIOpenURLContext"]
 - ["So11UIResponderC", "UIScene"]
 - ["So11UIResponderC", "UISceneSession"]
 - ["So11UIResponderC", "UIWindow"]
@@ -184,6 +196,8 @@ depends-member:
 - ["So11UIResponderC", "window"]
 - ["So11UIResponderC", "windowScene"]
 - ["So30UIResponderStandardEditActionsP", "ConnectionOptions"]
+- ["So30UIResponderStandardEditActionsP", "Set"]
+- ["So30UIResponderStandardEditActionsP", "UIOpenURLContext"]
 - ["So30UIResponderStandardEditActionsP", "UIScene"]
 - ["So30UIResponderStandardEditActionsP", "UISceneSession"]
 - ["So30UIResponderStandardEditActionsP", "UIWindow"]
@@ -217,6 +231,8 @@ depends-member:
 - ["So15UISceneDelegateP", "window"]
 - ["So15UISceneDelegateP", "windowScene"]
 - ["So23UIUserActivityRestoringP", "ConnectionOptions"]
+- ["So23UIUserActivityRestoringP", "Set"]
+- ["So23UIUserActivityRestoringP", "UIOpenURLContext"]
 - ["So23UIUserActivityRestoringP", "UIScene"]
 - ["So23UIUserActivityRestoringP", "UISceneSession"]
 - ["So23UIUserActivityRestoringP", "UIWindow"]
@@ -310,11 +326,19 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/seohyeokgyu/Documents/GitHub/BTStream/Pods/Firebase/CoreOnly/Sources/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
@@ -329,4 +353,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "127201c8c716b7030f8c10092b30daff"
+interface-hash: "565fa73654517b6640abee17bfc589ae"
