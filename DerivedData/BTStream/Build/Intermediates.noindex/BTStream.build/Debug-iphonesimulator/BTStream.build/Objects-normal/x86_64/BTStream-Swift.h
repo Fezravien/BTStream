@@ -188,6 +188,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import FSCalendar;
+@import Foundation;
 @import UIKit;
 #endif
 
@@ -219,11 +221,18 @@ SWIFT_CLASS("_TtC8BTStream11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class FSCalendar;
+@class UITextView;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC8BTStream22CalendarViewController")
-@interface CalendarViewController : UIViewController
+@interface CalendarViewController : UIViewController <FSCalendarDataSource, FSCalendarDelegateAppearance>
+@property (nonatomic, strong) IBOutlet FSCalendar * _Null_unspecified calendar;
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified dateIdenfier;
+- (void)viewDidLoad;
+- (void)calendar:(FSCalendar * _Nonnull)calendar didSelectDate:(NSDate * _Nonnull)date atMonthPosition:(FSCalendarMonthPosition)monthPosition;
+- (NSString * _Nullable)calendar:(FSCalendar * _Nonnull)calendar subtitleForDate:(NSDate * _Nonnull)date SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

@@ -12,18 +12,57 @@
         <!--캘린더-->
         <scene sceneID="Yum-3Z-vaJ">
             <objects>
-                <viewController title="캘린더" id="D2S-0a-Qrp" sceneMemberID="viewController">
+                <viewController title="캘린더" id="D2S-0a-Qrp" customClass="CalendarViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="veQ-Qf-Ocv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THk-v8-7Iq" customClass="FSCalendar">
+                                <rect key="frame" x="20" y="108" width="374" height="244"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vVZ-Bh-10x">
+                                <rect key="frame" x="20" y="396" width="374" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ZSo-DA-lmA" userLabel="TopLogoView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgL-4I-U7h">
+                                        <rect key="frame" x="139" y="34" width="136" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                        <state key="normal" title="BTStream"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="fld-jR-B6v"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="j7j-1g-kuT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZSo-DA-lmA" firstAttribute="leading" secondItem="j7j-1g-kuT" secondAttribute="leading" id="CCa-rJ-8fk"/>
+                            <constraint firstItem="ZSo-DA-lmA" firstAttribute="trailing" secondItem="j7j-1g-kuT" secondAttribute="trailing" id="VoA-BZ-a2T"/>
+                            <constraint firstItem="ZSo-DA-lmA" firstAttribute="top" secondItem="veQ-Qf-Ocv" secondAttribute="top" id="jP3-WI-SWW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="캘린더" image="calendar" catalog="system" id="j9W-FJ-Bce"/>
+                    <connections>
+                        <outlet property="calendar" destination="THk-v8-7Iq" id="wdA-bu-F5c"/>
+                        <outlet property="dateIdenfier" destination="vVZ-Bh-10x" id="cag-C6-5tF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gs-DQ-elY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="11"/>
+            <point key="canvasLocation" x="1018.840579710145" y="10.714285714285714"/>
         </scene>
         <!--피드-->
         <scene sceneID="vGk-UE-nzG">
@@ -527,6 +566,12 @@
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="list.bullet.below.rectangle" catalog="system" width="128" height="112"/>
         <image name="newspaper" catalog="system" width="128" height="108"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
