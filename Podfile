@@ -6,7 +6,8 @@ target 'BTStream' do
   use_frameworks!
 
   # Pods for BTStream
-pod 'Firebase/Auth'
-pod 'GoogleSignIn'
+#  pod 'Firebase/Auth'
+#  pod 'GoogleSignIn'
+  pod 'FSCalendar'
 
 end

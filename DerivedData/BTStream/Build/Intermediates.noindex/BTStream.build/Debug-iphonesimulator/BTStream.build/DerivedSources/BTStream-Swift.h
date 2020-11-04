@@ -188,6 +188,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import FSCalendar;
 @import UIKit;
 #endif
 
@@ -219,11 +220,14 @@ SWIFT_CLASS("_TtC8BTStream11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class FSCalendar;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC8BTStream22CalendarViewController")
-@interface CalendarViewController : UIViewController
+@interface CalendarViewController : UIViewController <FSCalendarDataSource, FSCalendarDelegate>
+@property (nonatomic, strong) IBOutlet FSCalendar * _Null_unspecified calendar;
+- (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

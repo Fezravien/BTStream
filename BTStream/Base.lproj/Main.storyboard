@@ -12,18 +12,28 @@
         <!--캘린더-->
         <scene sceneID="Yum-3Z-vaJ">
             <objects>
-                <viewController title="캘린더" id="D2S-0a-Qrp" sceneMemberID="viewController">
+                <viewController title="캘린더" id="D2S-0a-Qrp" customClass="CalendarViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="veQ-Qf-Ocv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THk-v8-7Iq" customClass="FSCalendar">
+                                <rect key="frame" x="20" y="150" width="374" height="244"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="j7j-1g-kuT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="캘린더" image="calendar" catalog="system" id="j9W-FJ-Bce"/>
+                    <connections>
+                        <outlet property="calendar" destination="THk-v8-7Iq" id="wdA-bu-F5c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gs-DQ-elY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="11"/>
+            <point key="canvasLocation" x="1018.840579710145" y="10.714285714285714"/>
         </scene>
         <!--피드-->
         <scene sceneID="vGk-UE-nzG">
