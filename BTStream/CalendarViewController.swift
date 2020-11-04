@@ -36,5 +36,20 @@ class CalendarViewController: UIViewController,FSCalendarDataSource, FSCalendarD
         print(dateFormatter.string(from: date) + " 선택됨")
         dateIdenfier.text=(dateFormatter.string(from: date) + " 선택됨")
     }
+    func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
+            
+            switch dateFormatter.string(from: date) {
+            case dateFormatter.string(from: Date()):
+                return "오늘"
+            case "2020-11-22":
+                return "출근"
+            case "2020-11-23":
+                return "지각"
+            case "2020-11-24":
+                return "결근"
+            default:
+                return nil
+            }
+        }
 }
 
