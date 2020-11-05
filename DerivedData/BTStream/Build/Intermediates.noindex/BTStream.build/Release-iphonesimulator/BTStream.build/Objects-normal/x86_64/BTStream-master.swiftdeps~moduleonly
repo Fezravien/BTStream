@@ -1,0 +1,12 @@
+version: "Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)"
+options: "09d41f2c39d54c6e4663a992fd0325ac"
+build_time: [1604470662, 360476000]
+inputs:
+  "/Users/seohyeokgyu/Documents/GitHub/BTStream/BTStream/CalendarViewController.swift": [9223372036, 854775807]
+  "/Users/seohyeokgyu/Documents/GitHub/BTStream/BTStream/SetViewController.swift": [9223372036, 854775807]
+  "/Users/seohyeokgyu/Documents/GitHub/BTStream/BTStream/HomeViewController.swift": [9223372036, 854775807]
+  "/Users/seohyeokgyu/Documents/GitHub/BTStream/BTStream/LoginViewController.swift": [9223372036, 854775807]
+  "/Users/seohyeokgyu/Documents/GitHub/BTStream/BTStream/NewsViewController.swift": [9223372036, 854775807]
+  "/Users/seohyeokgyu/Documents/GitHub/BTStream/BTStream/AppDelegate.swift": [9223372036, 854775807]
+  "/Users/seohyeokgyu/Documents/GitHub/BTStream/BTStream/FeedViewController.swift": [9223372036, 854775807]
+  "/Users/seohyeokgyu/Documents/GitHub/BTStream/BTStream/SceneDelegate.swift": [9223372036, 854775807]
