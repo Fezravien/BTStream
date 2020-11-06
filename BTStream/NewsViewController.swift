@@ -20,19 +20,13 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                     let json = try JSONSerialization.jsonObject(with: datajson, options: []) as! Dictionary<String ,Any>
                     
                     let articles = json["articles"] as! Array<Dictionary<String, Any>>
-           //         print(articles)
+                    //         print(articles)
                     
                     self.newsData = articles
                     DispatchQueue.main.async{
                         self.tableViewMain.reloadData()
                     }
                     
-                    //                    for(idx, value) in articles.enumerated(){
-                    //                        if let v = value as? Dictionary<String, Any>{
-                    //                            print("\(v["title"])")
-                    //                            v["description"]
-                    //                        }
-                    //                    }
                 } catch  {
                     
                 }
@@ -49,7 +43,6 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
             return 0
         }
         
-        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,17 +54,17 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         if let news = newsData{
             
             let row = news[idx]
-                if let r = row as? Dictionary<String, Any>{
-//                    v["description"]
+            if let r = row as? Dictionary<String, Any>{
+                //                    v["description"]
+                
+                if let title = r["title"] as? String{
+                    print(title)
+                    cell.LabelText.text = title
                     
-                    if let title = r["title"] as? String{
-                        print(title)
-                        cell.LabelText.text = title
-
-                    }
-
                 }
+                
             }
+        }
         
         
         return cell
@@ -79,6 +72,56 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row) click")
+//
+//        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+//        let controller = storyboard.instantiateViewController(identifier: "NewsDetailController") as! NewsDetailController
+//
+//        if let news = newsData{
+//            let row = news[indexPath.row]
+//
+//            if let r = row as? Dictionary<String, Any>{
+//
+//                if let imageUrl = r["urlToImage"] as? String{
+////                    print(imageUrl)
+//                    controller.imageUrl = imageUrl
+//
+//
+//                }
+//                if let desc = r["description"] as? String{
+////                    print(desc)
+//                    controller.desc = desc
+//
+//                }
+//            }
+//        }
+////        showDetailViewController(controller, sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let id = segue.identifier, "NewsDetail" == id {
+            if let controller = segue.destination as? NewsDetailController{
+                
+                if let news = newsData{
+                    if let indexPath = tableViewMain.indexPathForSelectedRow{
+                        let row = news[indexPath.row]
+                        
+                        if let r = row as? Dictionary<String, Any>{
+                            
+                            if let imageUrl = r["urlToImage"] as? String{
+                                print(imageUrl)
+                                controller.imageUrl = imageUrl
+                                
+                            }
+                            if let desc = r["description"] as? String{
+                                print(desc)
+                                controller.desc = desc
+                                
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
     }
     
     override func viewDidLoad() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nAm-3g-E1B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6rL-ee-dgf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gs-DQ-elY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018.840579710145" y="10.714285714285714"/>
+            <point key="canvasLocation" x="264" y="11"/>
         </scene>
         <!--피드-->
         <scene sceneID="vGk-UE-nzG">
@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pB6-3i-H1Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3168.115942028986" y="10.714285714285714"/>
+            <point key="canvasLocation" x="4078.2608695652175" y="10.714285714285714"/>
         </scene>
         <!--설정-->
         <scene sceneID="bbD-ir-tKF">
@@ -94,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="778-vF-cu3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4205.7971014492759" y="10.714285714285714"/>
+            <point key="canvasLocation" x="5115.9420289855079" y="10.714285714285714"/>
         </scene>
         <!--홈-->
         <scene sceneID="rXQ-fl-MYS">
@@ -290,7 +290,7 @@
                     <connections>
                         <segue destination="0j7-4a-mjy" kind="relationship" relationship="viewControllers" id="hpD-Az-fIB"/>
                         <segue destination="D2S-0a-Qrp" kind="relationship" relationship="viewControllers" id="TGg-qb-mdb"/>
-                        <segue destination="2GH-FJ-qLF" kind="relationship" relationship="viewControllers" id="WmV-6Q-niV"/>
+                        <segue destination="6rL-ee-dgf" kind="relationship" relationship="viewControllers" id="WmV-6Q-niV"/>
                         <segue destination="UTv-A3-lu5" kind="relationship" relationship="viewControllers" id="SVG-8v-Axo"/>
                         <segue destination="san-he-EtK" kind="relationship" relationship="viewControllers" id="hPW-Fh-d4k"/>
                     </connections>
@@ -351,6 +351,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="LabelText" destination="ldo-Uf-0Vh" id="0Wf-t0-b3m"/>
+                                            <segue destination="8rf-IK-2C4" kind="show" identifier="NewsDetail" id="9bb-95-9wk"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -368,14 +369,57 @@
                             <constraint firstItem="ynI-Qb-PwN" firstAttribute="top" secondItem="OPV-9o-hQE" secondAttribute="bottom" constant="8" symbolic="YES" id="x14-lU-JWg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="기사" image="newspaper" catalog="system" id="EOy-vL-wlS"/>
+                    <navigationItem key="navigationItem" id="NmR-xG-qhQ"/>
                     <connections>
                         <outlet property="tableViewMain" destination="ynI-Qb-PwN" id="JkF-qZ-1ZC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seR-Pi-35E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2126.0869565217395" y="10.714285714285714"/>
+            <point key="canvasLocation" x="1954" y="11"/>
+        </scene>
+        <!--News Detail Controller-->
+        <scene sceneID="P0z-Tk-vTM">
+            <objects>
+                <viewController storyboardIdentifier="NewsDetailController" id="8rf-IK-2C4" customClass="NewsDetailController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FeX-pw-hHg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UyE-Nd-T9l">
+                                <rect key="frame" x="20" y="109" width="374" height="197.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="oqx-Bl-4Dd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x14-6X-1lO">
+                                <rect key="frame" x="20" y="316" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5M8-u0-bOF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5M8-u0-bOF" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="x14-6X-1lO" secondAttribute="bottom" constant="20" id="9qG-tl-tgL"/>
+                            <constraint firstItem="UyE-Nd-T9l" firstAttribute="leading" secondItem="5M8-u0-bOF" secondAttribute="leading" constant="20" id="OiT-eX-sR1"/>
+                            <constraint firstItem="x14-6X-1lO" firstAttribute="leading" secondItem="5M8-u0-bOF" secondAttribute="leading" constant="20" id="SEo-sC-GEe"/>
+                            <constraint firstItem="UyE-Nd-T9l" firstAttribute="top" secondItem="5M8-u0-bOF" secondAttribute="top" constant="20" id="Suy-bQ-X4o"/>
+                            <constraint firstItem="x14-6X-1lO" firstAttribute="top" secondItem="UyE-Nd-T9l" secondAttribute="bottom" constant="8" symbolic="YES" id="XMU-kF-Whp"/>
+                            <constraint firstItem="5M8-u0-bOF" firstAttribute="trailing" secondItem="UyE-Nd-T9l" secondAttribute="trailing" constant="20" id="mqB-gA-b8b"/>
+                            <constraint firstItem="5M8-u0-bOF" firstAttribute="trailing" secondItem="x14-6X-1lO" secondAttribute="trailing" constant="20" id="wuN-fh-jDv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NSS-Oq-obu"/>
+                    <connections>
+                        <outlet property="ImageMain" destination="UyE-Nd-T9l" id="yg2-MT-wIK"/>
+                        <outlet property="LabelMain" destination="x14-6X-1lO" id="zKG-ZJ-LHP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRN-ku-jLP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2734.7826086956525" y="10.714285714285714"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1Ez-gz-epg">
@@ -635,9 +679,29 @@
             </objects>
             <point key="canvasLocation" x="-704" y="276"/>
         </scene>
+        <!--기사-->
+        <scene sceneID="fpd-PV-Vtj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6rL-ee-dgf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="기사" image="newspaper" catalog="system" id="EOy-vL-wlS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hqx-EI-s2b">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2GH-FJ-qLF" kind="relationship" relationship="rootViewController" id="jHQ-UG-HRh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9GK-SA-Kdg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197" y="11"/>
+        </scene>
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="folder.fill" catalog="system" width="128" height="97"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="list.bullet.below.rectangle" catalog="system" width="128" height="112"/>
