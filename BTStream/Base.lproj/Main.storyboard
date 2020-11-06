@@ -302,14 +302,76 @@
         <!--기사-->
         <scene sceneID="Q7s-u6-XUO">
             <objects>
-                <viewController title="기사" id="2GH-FJ-qLF" sceneMemberID="viewController">
+                <viewController title="기사" id="2GH-FJ-qLF" customClass="NewsViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rIC-dt-wR1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="OPV-9o-hQE" userLabel="TopLogoView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qy5-5Z-5IK">
+                                        <rect key="frame" x="139" y="34" width="136" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                        <state key="normal" title="BTStream"/>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="CrN-g9-rvO"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9jy-LN-rMW"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="vbX-0I-fzw"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ynI-Qb-PwN">
+                                <rect key="frame" x="0.0" y="108" width="414" height="705"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Type1" rowHeight="150" id="Foc-8m-PW9" customClass="Type1" customModule="BTStream" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Foc-8m-PW9" id="VtG-zW-c38">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldo-Uf-0Vh">
+                                                    <rect key="frame" x="20" y="11" width="374" height="128"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ldo-Uf-0Vh" firstAttribute="bottom" secondItem="VtG-zW-c38" secondAttribute="bottomMargin" id="im0-XG-4lB"/>
+                                                <constraint firstItem="ldo-Uf-0Vh" firstAttribute="leading" secondItem="VtG-zW-c38" secondAttribute="leadingMargin" id="ra6-FR-TqP"/>
+                                                <constraint firstItem="ldo-Uf-0Vh" firstAttribute="trailing" secondItem="VtG-zW-c38" secondAttribute="trailingMargin" id="vNh-Sm-Iqz"/>
+                                                <constraint firstItem="ldo-Uf-0Vh" firstAttribute="top" secondItem="VtG-zW-c38" secondAttribute="topMargin" id="wA9-q9-9RZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="LabelText" destination="ldo-Uf-0Vh" id="0Wf-t0-b3m"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="C7p-pW-CTj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ynI-Qb-PwN" firstAttribute="leading" secondItem="C7p-pW-CTj" secondAttribute="leading" id="BRy-QF-kFT"/>
+                            <constraint firstItem="ynI-Qb-PwN" firstAttribute="bottom" secondItem="C7p-pW-CTj" secondAttribute="bottom" id="H0U-Pl-Wrp"/>
+                            <constraint firstItem="ynI-Qb-PwN" firstAttribute="trailing" secondItem="C7p-pW-CTj" secondAttribute="trailing" id="Iz9-lV-EZM"/>
+                            <constraint firstItem="OPV-9o-hQE" firstAttribute="leading" secondItem="C7p-pW-CTj" secondAttribute="leading" id="MH7-u7-ptF"/>
+                            <constraint firstItem="OPV-9o-hQE" firstAttribute="trailing" secondItem="C7p-pW-CTj" secondAttribute="trailing" id="aff-Uv-UUp"/>
+                            <constraint firstItem="OPV-9o-hQE" firstAttribute="top" secondItem="rIC-dt-wR1" secondAttribute="top" id="m0M-CF-lOk"/>
+                            <constraint firstItem="ynI-Qb-PwN" firstAttribute="top" secondItem="OPV-9o-hQE" secondAttribute="bottom" constant="8" symbolic="YES" id="x14-lU-JWg"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="기사" image="newspaper" catalog="system" id="EOy-vL-wlS"/>
+                    <connections>
+                        <outlet property="tableViewMain" destination="ynI-Qb-PwN" id="JkF-qZ-1ZC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seR-Pi-35E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
