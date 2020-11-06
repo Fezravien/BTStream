@@ -153,7 +153,7 @@
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTr-5s-Te4">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                                                 <connections>
-                                                    <segue destination="XoZ-pA-dLg" kind="embed" id="cFZ-Er-j46"/>
+                                                    <segue destination="XoZ-pA-dLg" kind="embed" identifier="hot" id="cFZ-Er-j46"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -168,7 +168,7 @@
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPf-ug-7k3">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                                                 <connections>
-                                                    <segue destination="TPY-TO-yi5" kind="embed" id="ecD-oC-QLf"/>
+                                                    <segue destination="TPY-TO-yi5" kind="embed" identifier="new" id="ecD-oC-QLf"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -183,7 +183,7 @@
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0oX-4j-fPJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                                                 <connections>
-                                                    <segue destination="0oT-Up-KqA" kind="embed" id="qXb-oD-Fg4"/>
+                                                    <segue destination="0oT-Up-KqA" kind="embed" identifier="comment" id="qXb-oD-Fg4"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -315,15 +315,15 @@
             </objects>
             <point key="canvasLocation" x="2126.0869565217395" y="10.714285714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Members View Controller-->
         <scene sceneID="1Ez-gz-epg">
             <objects>
-                <viewController id="uAq-MY-fQh" sceneMemberID="viewController">
+                <viewController id="uAq-MY-fQh" customClass="MembersViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N0e-TR-wX0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정국" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiu-cZ-NrD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맴버" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiu-cZ-NrD">
                                 <rect key="frame" x="5" y="5" width="39" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
@@ -339,7 +339,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RNf-Ci-OVx">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MembersCell" id="RNf-Ci-OVx" userLabel="MembersCell" customClass="MembersCell" customModule="BTStream" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="5" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -360,8 +360,15 @@
                                             <constraint firstAttribute="bottom" secondItem="RC3-AR-QhW" secondAttribute="bottom" id="zII-Ki-hQL"/>
                                         </constraints>
                                         <size key="customSize" width="50" height="50"/>
+                                        <connections>
+                                            <outlet property="img" destination="RC3-AR-QhW" id="Mwa-4C-ipx"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="uAq-MY-fQh" id="wyV-SN-h0L"/>
+                                    <outlet property="delegate" destination="uAq-MY-fQh" id="iOZ-8x-RMS"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zc1-Ik-2cF"/>
