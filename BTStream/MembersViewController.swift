@@ -20,7 +20,7 @@ extension MembersViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MembersCell", for: indexPath) as? MembersCell else {
             return UICollectionViewCell()
         }
-        cell.backgroundColor = .red
+        
         return cell
         
     }

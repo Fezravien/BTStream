@@ -391,7 +391,7 @@
         <!--홈1-->
         <scene sceneID="3Yi-mC-75p">
             <objects>
-                <viewController id="XoZ-pA-dLg" userLabel="홈1" sceneMemberID="viewController">
+                <viewController id="XoZ-pA-dLg" userLabel="홈1" customClass="RecommendViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KgR-eb-vaM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -399,15 +399,15 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="li1-Dy-YNc">
                                 <rect key="frame" x="0.0" y="40" width="414" height="140"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hvJ-IX-B5g">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hvJ-IX-B5g">
                                     <size key="itemSize" width="150" height="104"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UHz-BA-sCr">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecommendCell" id="UHz-BA-sCr" customClass="RecommendCell" customModule="BTStream" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="10" width="160" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eoL-5y-O6g">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
@@ -424,9 +424,17 @@
                                                 <constraint firstAttribute="trailing" secondItem="y3g-c8-Tqb" secondAttribute="trailing" id="m27-fT-7H6"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <size key="customSize" width="160" height="120"/>
+                                        <connections>
+                                            <outlet property="img" destination="y3g-c8-Tqb" id="41n-RA-0cL"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="XoZ-pA-dLg" id="wbg-mz-REA"/>
+                                    <outlet property="delegate" destination="XoZ-pA-dLg" id="RyX-Qe-GHk"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="핫한 영상" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXo-bE-RQj">
                                 <rect key="frame" x="10" y="15" width="254" height="21"/>
@@ -447,6 +455,9 @@
                             <constraint firstAttribute="bottom" secondItem="li1-Dy-YNc" secondAttribute="bottom" id="mGR-9U-QUM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recommendTitle" destination="uXo-bE-RQj" id="xBm-6K-rwB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PnV-Uq-DYJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -455,7 +466,7 @@
         <!--홈2-->
         <scene sceneID="IJa-1n-xxb">
             <objects>
-                <viewController id="TPY-TO-yi5" userLabel="홈2" sceneMemberID="viewController">
+                <viewController id="TPY-TO-yi5" userLabel="홈2" customClass="RecommendViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EYV-cw-a1p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -469,15 +480,15 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ctd-wl-YNI">
                                 <rect key="frame" x="0.0" y="40" width="414" height="140"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oiU-MP-vQ7">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oiU-MP-vQ7">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cwg-RV-9p2">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecommendCell" id="cwg-RV-9p2" customClass="RecommendCell" customModule="BTStream" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="10" width="160" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8Pw-Az-iId">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
@@ -494,9 +505,17 @@
                                                 <constraint firstItem="JBe-52-vYM" firstAttribute="top" secondItem="8Pw-Az-iId" secondAttribute="top" id="wP4-li-7Hz"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <size key="customSize" width="160" height="120"/>
+                                        <connections>
+                                            <outlet property="img" destination="JBe-52-vYM" id="3gW-F0-PrS"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="TPY-TO-yi5" id="7it-fo-OiR"/>
+                                    <outlet property="delegate" destination="TPY-TO-yi5" id="Rf5-KF-GXH"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="753-sn-wiB"/>
@@ -511,6 +530,9 @@
                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="6gW-vq-QLF" secondAttribute="trailing" constant="150" id="lKv-Le-2kp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recommendTitle" destination="6gW-vq-QLF" id="cSI-Mf-wUm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgU-DL-sDX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -519,7 +541,7 @@
         <!--홈3-->
         <scene sceneID="fdj-FX-DGf">
             <objects>
-                <viewController id="0oT-Up-KqA" userLabel="홈3" sceneMemberID="viewController">
+                <viewController id="0oT-Up-KqA" userLabel="홈3" customClass="RecommendViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ydy-qC-Kfx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -527,15 +549,15 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Uyb-do-Fez">
                                 <rect key="frame" x="0.0" y="40" width="414" height="140"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PTY-56-HHK">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ngw-3R-L4l">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="noA-pe-Rfy">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecommendCell" id="noA-pe-Rfy" customClass="RecommendCell" customModule="BTStream" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="10" width="160" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cQX-ey-VFJ">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
@@ -552,9 +574,17 @@
                                                 <constraint firstAttribute="trailing" secondItem="cgI-wp-mUE" secondAttribute="trailing" id="lzP-d1-ooJ"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <size key="customSize" width="160" height="120"/>
+                                        <connections>
+                                            <outlet property="img" destination="cgI-wp-mUE" id="g4N-wf-RwF"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="0oT-Up-KqA" id="Ccx-lx-wC3"/>
+                                    <outlet property="delegate" destination="0oT-Up-KqA" id="BXd-LX-WUR"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="댓글이 많은 영상" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdy-76-aAd">
                                 <rect key="frame" x="10" y="15" width="264" height="21"/>
@@ -575,6 +605,9 @@
                             <constraint firstItem="Uyb-do-Fez" firstAttribute="leading" secondItem="Ydy-qC-Kfx" secondAttribute="leading" id="d6w-cS-Oga"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recommendTitle" destination="xdy-76-aAd" id="oWR-Vb-7qN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wmg-Vs-fAQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -610,6 +643,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
