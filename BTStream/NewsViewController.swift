@@ -13,7 +13,7 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     var newsData :Array<Dictionary<String,Any>>?
     
     func getNews(){
-        let task = URLSession.shared.dataTask(with: URL(string: "https://newsapi.org/v2/top-headlines?country=kr&apiKey=568fe86ad1fb4b7a9ebfdfe63a80ed74")!) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: URL(string: "https://newsapi.org/v2/everything?q=BTS&apiKey=568fe86ad1fb4b7a9ebfdfe63a80ed74")!) { (data, response, error) in
             if let datajson = data {
                 
                 do {
