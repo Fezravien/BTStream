@@ -11,6 +11,10 @@
 		267E951D2554F6FD00AEDAB2 /* Type1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267E951C2554F6FD00AEDAB2 /* Type1.swift */; };
 		267E9520255518CD00AEDAB2 /* NewsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267E951F255518CD00AEDAB2 /* NewsDetailController.swift */; };
 		26FA4C57254EA5A40008BA7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26FA4C56254EA5A40008BA7F /* GoogleService-Info.plist */; };
+		BAB6849A25554EE300BD5AF9 /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB6849925554EE300BD5AF9 /* MembersViewController.swift */; };
+		BAB684B22555645400BD5AF9 /* MembersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB684B12555645400BD5AF9 /* MembersCell.swift */; };
+		BAB684B52555737300BD5AF9 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB684B42555737300BD5AF9 /* RecommendViewController.swift */; };
+		BAB684BF255598C200BD5AF9 /* RecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB684BE255598C200BD5AF9 /* RecommendCell.swift */; };
 		BAD86A6C254BFF9E009351AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD86A6B254BFF9E009351AE /* AppDelegate.swift */; };
 		BAD86A6E254BFF9E009351AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD86A6D254BFF9E009351AE /* SceneDelegate.swift */; };
 		BAD86A73254BFF9E009351AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD86A71254BFF9E009351AE /* Main.storyboard */; };
@@ -31,6 +35,10 @@
 		26FA4C56254EA5A40008BA7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94FD808D7390FDF06495F90F /* Pods-BTStream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BTStream.release.xcconfig"; path = "Target Support Files/Pods-BTStream/Pods-BTStream.release.xcconfig"; sourceTree = "<group>"; };
 		B0AD740ACEBA284567459C37 /* Pods_BTStream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BTStream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAB6849925554EE300BD5AF9 /* MembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
+		BAB684B12555645400BD5AF9 /* MembersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersCell.swift; sourceTree = "<group>"; };
+		BAB684B42555737300BD5AF9 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		BAB684BE255598C200BD5AF9 /* RecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCell.swift; sourceTree = "<group>"; };
 		BAD86A68254BFF9E009351AE /* BTStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BTStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD86A6B254BFF9E009351AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAD86A6D254BFF9E009351AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +94,10 @@
 				BAD86A71254BFF9E009351AE /* Main.storyboard */,
 				BAD86A80254C36E3009351AE /* LoginViewController.swift */,
 				BAD86A83254C36F6009351AE /* HomeViewController.swift */,
+				BAB6849925554EE300BD5AF9 /* MembersViewController.swift */,
+				BAB684B42555737300BD5AF9 /* RecommendViewController.swift */,
+				BAB684BE255598C200BD5AF9 /* RecommendCell.swift */,
+				BAB684B12555645400BD5AF9 /* MembersCell.swift */,
 				BAD86A8A254C3723009351AE /* CalendarViewController.swift */,
 				BAD86A8D254C372D009351AE /* NewsViewController.swift */,
 				BAD86A90254C373D009351AE /* FeedViewController.swift */,
@@ -252,14 +264,18 @@
 			files = (
 				BAD86A8B254C3723009351AE /* CalendarViewController.swift in Sources */,
 				267E9520255518CD00AEDAB2 /* NewsDetailController.swift in Sources */,
+				BAB6849A25554EE300BD5AF9 /* MembersViewController.swift in Sources */,
 				BAD86A94254C3755009351AE /* SetViewController.swift in Sources */,
 				267E951D2554F6FD00AEDAB2 /* Type1.swift in Sources */,
 				BAD86A84254C36F6009351AE /* HomeViewController.swift in Sources */,
+				BAB684BF255598C200BD5AF9 /* RecommendCell.swift in Sources */,
 				BAD86A81254C36E3009351AE /* LoginViewController.swift in Sources */,
 				BAD86A8E254C372D009351AE /* NewsViewController.swift in Sources */,
 				BAD86A6C254BFF9E009351AE /* AppDelegate.swift in Sources */,
+				BAB684B22555645400BD5AF9 /* MembersCell.swift in Sources */,
 				BAD86A91254C373D009351AE /* FeedViewController.swift in Sources */,
 				BAD86A6E254BFF9E009351AE /* SceneDelegate.swift in Sources */,
+				BAB684B52555737300BD5AF9 /* RecommendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
