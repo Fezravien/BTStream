@@ -11,9 +11,10 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     @IBOutlet weak var tableViewMain: UITableView!
     var newsData :Array<Dictionary<String,Any>>?
-    
+
+
     func getNews(){
-        let task = URLSession.shared.dataTask(with: URL(string: "https://newsapi.org/v2/everything?q=BTS&apiKey=568fe86ad1fb4b7a9ebfdfe63a80ed74")!) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: URL(string: "http://newsapi.org/v2/top-headlines?country=kr&apiKey=568fe86ad1fb4b7a9ebfdfe63a80ed74")!) { (data, response, error) in
             if let datajson = data {
                 
                 do {
@@ -56,12 +57,25 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
             let row = news[idx]
             if let r = row as? Dictionary<String, Any>{
                 //                    v["description"]
-                
                 if let title = r["title"] as? String{
-                    print(title)
-                    cell.LabelText.text = title
-                    
+                    print("title " + title)
+                    cell.TitleLabel.text = title
                 }
+                if let desc = r["description"] as? String{
+                    print("desc " + desc)
+                    cell.DescLabel.text = desc
+                }
+                if let image = r["urlToImage"] as? String{
+                    print(image)
+                    let url = URL(string: image)
+                    let data = try? Data(contentsOf: url!)
+                    if data != nil{
+                        cell.TitleImage.image = UIImage(data: data!)
+                    } else{
+                        print("error")
+                    }
+                }
+                
                 
             }
         }
@@ -124,10 +138,11 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         }
     }
     
+
     override func viewDidLoad() {
         tableViewMain.delegate =  self
         tableViewMain.dataSource = self
-        
+        tableViewMain.rowHeight = UITableView.automaticDimension
         getNews()
     }
     

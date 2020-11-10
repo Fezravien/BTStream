@@ -9,6 +9,9 @@ import UIKit
 
 class Type1 : UITableViewCell {
      
-    @IBOutlet weak var LabelText: UILabel!
+    @IBOutlet weak var TitleLabel: UILabel!
+    @IBOutlet weak var TitleImage: UIImageView!
+    @IBOutlet weak var DescLabel: UILabel!
+    
     
 }
