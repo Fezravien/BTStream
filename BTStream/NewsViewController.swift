@@ -12,9 +12,13 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var tableViewMain: UITableView!
     var newsData :Array<Dictionary<String,Any>>?
 
-
+    
     func getNews(){
-        let task = URLSession.shared.dataTask(with: URL(string: "http://newsapi.org/v2/top-headlines?country=kr&apiKey=568fe86ad1fb4b7a9ebfdfe63a80ed74")!) { (data, response, error) in
+        let originalString = "http://newsapi.org/v2/everything?q=방탄소년단&apiKey=568fe86ad1fb4b7a9ebfdfe63a80ed74"
+        let escapedString = originalString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+
+
+        let task = URLSession.shared.dataTask(with: URL(string: escapedString!)!) { (data, response, error) in
             if let datajson = data {
                 
                 do {
@@ -68,12 +72,17 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                 if let image = r["urlToImage"] as? String{
                     print(image)
                     let url = URL(string: image)
+                    if url != nil {
                     let data = try? Data(contentsOf: url!)
-                    if data != nil{
                         cell.TitleImage.image = UIImage(data: data!)
-                    } else{
+
+                    } else {
                         print("error")
                     }
+//                    if data != nil{
+//                    } else{
+//                        print("error")
+//                    }
                 }
                 
                 
