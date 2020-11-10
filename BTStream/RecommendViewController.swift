@@ -33,7 +33,7 @@ extension RecommendViewController: UICollectionViewDataSource {
 
 extension RecommendViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 120, height: 160)
+        return CGSize(width: 150, height: 130)
     }
 }
 
