@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0DA2396BC77B83DDD4F30E53 /* Pods_BTStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0AD740ACEBA284567459C37 /* Pods_BTStream.framework */; };
+		267E951D2554F6FD00AEDAB2 /* Type1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267E951C2554F6FD00AEDAB2 /* Type1.swift */; };
+		267E9520255518CD00AEDAB2 /* NewsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267E951F255518CD00AEDAB2 /* NewsDetailController.swift */; };
 		26FA4C57254EA5A40008BA7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26FA4C56254EA5A40008BA7F /* GoogleService-Info.plist */; };
 		BAB6849A25554EE300BD5AF9 /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB6849925554EE300BD5AF9 /* MembersViewController.swift */; };
 		BAB684B22555645400BD5AF9 /* MembersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB684B12555645400BD5AF9 /* MembersCell.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		267E951C2554F6FD00AEDAB2 /* Type1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type1.swift; sourceTree = "<group>"; };
+		267E951F255518CD00AEDAB2 /* NewsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailController.swift; sourceTree = "<group>"; };
 		26FA4C46254EA1330008BA7F /* BTStream.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BTStream.entitlements; sourceTree = "<group>"; };
 		26FA4C56254EA5A40008BA7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94FD808D7390FDF06495F90F /* Pods-BTStream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BTStream.release.xcconfig"; path = "Target Support Files/Pods-BTStream/Pods-BTStream.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				BAD86A74254BFFA0009351AE /* Assets.xcassets */,
 				BAD86A76254BFFA0009351AE /* LaunchScreen.storyboard */,
 				BAD86A79254BFFA0009351AE /* Info.plist */,
+				267E951C2554F6FD00AEDAB2 /* Type1.swift */,
+				267E951F255518CD00AEDAB2 /* NewsDetailController.swift */,
 			);
 			path = BTStream;
 			sourceTree = "<group>";
@@ -257,8 +263,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD86A8B254C3723009351AE /* CalendarViewController.swift in Sources */,
+				267E9520255518CD00AEDAB2 /* NewsDetailController.swift in Sources */,
 				BAB6849A25554EE300BD5AF9 /* MembersViewController.swift in Sources */,
 				BAD86A94254C3755009351AE /* SetViewController.swift in Sources */,
+				267E951D2554F6FD00AEDAB2 /* Type1.swift in Sources */,
 				BAD86A84254C36F6009351AE /* HomeViewController.swift in Sources */,
 				BAB684BF255598C200BD5AF9 /* RecommendCell.swift in Sources */,
 				BAD86A81254C36E3009351AE /* LoginViewController.swift in Sources */,
