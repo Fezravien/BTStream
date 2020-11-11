@@ -129,16 +129,11 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                         
                         if let r = row as? Dictionary<String, Any>{
                             
-                            if let imageUrl = r["urlToImage"] as? String{
-                                print(imageUrl)
-                                controller.imageUrl = imageUrl
-                                
+                            if let Url = r["url"] as? String{
+                                print(Url)
+                                controller.Url = Url
                             }
-                            if let desc = r["description"] as? String{
-                                print(desc)
-                                controller.desc = desc
-                                
-                            }
+        
                             
                         }
                     }

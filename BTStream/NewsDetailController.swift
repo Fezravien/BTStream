@@ -6,35 +6,29 @@
 //
 
 import UIKit
+import WebKit
 
 class NewsDetailController: UIViewController {
     
-    @IBOutlet weak var LabelMain: UILabel!
-    @IBOutlet weak var ImageMain: UIImageView!
-    
-    
-    var imageUrl: String?
-    var desc: String?
+        
+    @IBOutlet weak var WebView: WKWebView!
+    var Url: String?
     
     
     override func viewDidLoad() {
         
         
-        if let img = imageUrl{
-            if let data = try? Data(contentsOf: URL(string: img)!){
-                DispatchQueue.main.async{
-                    self.ImageMain.image = UIImage(data: data)
-                    
-                }
+        if let url = Url{
+            if let data = try? String(contentsOf: URL(string: url)!){
+//                let url = URL(string: data)
+                let request = URLRequest(url: URL(string: url)!)
+                WebView.load(request)
                 
             }
             
         }
         
-        if let des = desc{
-            self.LabelMain.text = des 
-            
-        }
+ 
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
