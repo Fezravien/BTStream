@@ -1,13 +1,9 @@
-//
-//  HomeViewController.swift
-//  BTStream
-//
-//  Created by 윤재웅 on 2020/10/30.
-//
-
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    var url:URL!
+    var data:Data!
     
     var membersViewController: MembersViewController!
     var hotViewController: RecommendViewController!
@@ -18,6 +14,7 @@ class HomeViewController: UIViewController {
         if segue.identifier == "members" {
             let distinationVC = segue.destination as? MembersViewController
             membersViewController = distinationVC
+           
             
         } else if segue.identifier == "hot" {
             let distinationVC = segue.destination as? RecommendViewController
@@ -36,6 +33,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         self.title="BTSteam"
+        
     }
     
     

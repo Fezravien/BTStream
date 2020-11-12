@@ -1,20 +1,16 @@
-//
-//  RecommendViewController.swift
-//  BTStream
-//
-//  Created by 윤재웅 on 2020/11/06.
-//
-
 import UIKit
 
 class RecommendViewController: UIViewController {
     @IBOutlet weak var recommendTitle: UILabel!
+    var url:URL!
+    var data:Data!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-    }
+        url = URL(string: "https://img.youtube.com/vi/gdZLi9oWNZg/mqdefault.jpg")
+        data = try? Data(contentsOf: url!)
 
+    }
 }
 
 extension RecommendViewController: UICollectionViewDataSource {
@@ -26,6 +22,9 @@ extension RecommendViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendCell", for: indexPath) as? RecommendCell else {
             return UICollectionViewCell()
         }
+        
+        cell.thumbnail.image = UIImage(data: data!)
+        
         return cell
     }
     
@@ -33,7 +32,9 @@ extension RecommendViewController: UICollectionViewDataSource {
 
 extension RecommendViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: 130)
+        return CGSize(width: 50, height: 40)
     }
 }
+
+
 

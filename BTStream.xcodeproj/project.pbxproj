@@ -13,6 +13,7 @@
 		BAB684B22555645400BD5AF9 /* MembersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB684B12555645400BD5AF9 /* MembersCell.swift */; };
 		BAB684B52555737300BD5AF9 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB684B42555737300BD5AF9 /* RecommendViewController.swift */; };
 		BAB684BF255598C200BD5AF9 /* RecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB684BE255598C200BD5AF9 /* RecommendCell.swift */; };
+		BAB684FD255AC3DD00BD5AF9 /* YoutubePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB684FC255AC3DD00BD5AF9 /* YoutubePlayerViewController.swift */; };
 		BAD86A6C254BFF9E009351AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD86A6B254BFF9E009351AE /* AppDelegate.swift */; };
 		BAD86A6E254BFF9E009351AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD86A6D254BFF9E009351AE /* SceneDelegate.swift */; };
 		BAD86A73254BFF9E009351AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD86A71254BFF9E009351AE /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		BAB684B12555645400BD5AF9 /* MembersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersCell.swift; sourceTree = "<group>"; };
 		BAB684B42555737300BD5AF9 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		BAB684BE255598C200BD5AF9 /* RecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCell.swift; sourceTree = "<group>"; };
+		BAB684FC255AC3DD00BD5AF9 /* YoutubePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubePlayerViewController.swift; sourceTree = "<group>"; };
 		BAD86A68254BFF9E009351AE /* BTStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BTStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD86A6B254BFF9E009351AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAD86A6D254BFF9E009351AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				BAD86A6B254BFF9E009351AE /* AppDelegate.swift */,
 				BAD86A6D254BFF9E009351AE /* SceneDelegate.swift */,
 				BAD86A71254BFF9E009351AE /* Main.storyboard */,
+				BAB684FC255AC3DD00BD5AF9 /* YoutubePlayerViewController.swift */,
 				BAD86A80254C36E3009351AE /* LoginViewController.swift */,
 				BAD86A83254C36F6009351AE /* HomeViewController.swift */,
 				BAB6849925554EE300BD5AF9 /* MembersViewController.swift */,
@@ -142,6 +145,8 @@
 			dependencies = (
 			);
 			name = BTStream;
+			packageProductDependencies = (
+			);
 			productName = BTStream;
 			productReference = BAD86A68254BFF9E009351AE /* BTStream.app */;
 			productType = "com.apple.product-type.application";
@@ -169,6 +174,8 @@
 				Base,
 			);
 			mainGroup = BAD86A5F254BFF9E009351AE;
+			packageReferences = (
+			);
 			productRefGroup = BAD86A69254BFF9E009351AE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,6 +273,7 @@
 				BAD86A6C254BFF9E009351AE /* AppDelegate.swift in Sources */,
 				BAB684B22555645400BD5AF9 /* MembersCell.swift in Sources */,
 				BAD86A91254C373D009351AE /* FeedViewController.swift in Sources */,
+				BAB684FD255AC3DD00BD5AF9 /* YoutubePlayerViewController.swift in Sources */,
 				BAD86A6E254BFF9E009351AE /* SceneDelegate.swift in Sources */,
 				BAB684B52555737300BD5AF9 /* RecommendViewController.swift in Sources */,
 			);
