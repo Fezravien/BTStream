@@ -148,14 +148,16 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         let titleView = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width , height: (self.navigationController?.navigationBar.frame.height)!))
         titleView.textAlignment = .center
         titleView.textColor = .systemBlue
-//        titleView.font = .boldSystemFont(ofSize: 28)
         titleView.font = .systemFont(ofSize: 28, weight: .heavy)
         titleView.text = "BTStream"
         self.navigationItem.titleView = titleView
         
         tableViewMain.delegate =  self
+        tableViewMain.tableFooterView = UIView(frame: .zero)
         tableViewMain.dataSource = self
         tableViewMain.rowHeight = UITableView.automaticDimension
+        super.viewDidLoad()
+
         getNews()
     }
     
