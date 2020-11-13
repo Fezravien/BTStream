@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eBf-ae-1DO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K9r-1C-fbL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -216,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNY-sZ-JQ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7109" y="11"/>
+            <point key="canvasLocation" x="6880" y="11"/>
         </scene>
         <!--홈-->
         <scene sceneID="rXQ-fl-MYS">
@@ -379,13 +379,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IIU-7g-r09" customClass="UIStackView">
-                                <rect key="frame" x="87" y="104" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cq0-ET-s9b" customClass="GIDSignInButton">
-                                <rect key="frame" x="87" y="260" width="240" height="128"/>
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
@@ -398,6 +393,11 @@
                                     <segue destination="HpF-Q9-9K9" kind="show" id="l3J-5I-YCX"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IIU-7g-r09" customClass="UIStackView">
+                                <rect key="frame" x="87" y="314" width="240" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8y4-PX-oqm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -861,10 +861,10 @@
             </objects>
             <point key="canvasLocation" x="-704.34782608695662" y="275.22321428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Youtube Player View Controller-->
         <scene sceneID="BJ3-7o-sGp">
             <objects>
-                <viewController id="K9r-1C-fbL" sceneMemberID="viewController">
+                <viewController id="K9r-1C-fbL" customClass="YoutubePlayerViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bOw-fM-u9v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -875,36 +875,18 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHe-tE-V0S">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="941"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="krg-vD-i10">
-                                                <rect key="frame" x="87" y="70" width="240" height="128"/>
-                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="128" id="gFO-pR-ncR"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ssh-LB-ssY">
-                                                <rect key="frame" x="87" y="440" width="240" height="128"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XmN-mC-60T">
-                                                <rect key="frame" x="87" y="805" width="240" height="128"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPl-hU-L3n" customClass="WKYTPlayerView">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="281"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="XmN-mC-60T" firstAttribute="centerX" secondItem="DHe-tE-V0S" secondAttribute="centerX" id="3Y1-te-Gss"/>
-                                            <constraint firstItem="krg-vD-i10" firstAttribute="centerX" secondItem="DHe-tE-V0S" secondAttribute="centerX" id="BHC-xL-aJo"/>
-                                            <constraint firstItem="Ssh-LB-ssY" firstAttribute="height" secondItem="krg-vD-i10" secondAttribute="height" id="GvV-qu-1Po"/>
-                                            <constraint firstItem="krg-vD-i10" firstAttribute="leading" secondItem="DHe-tE-V0S" secondAttribute="leading" constant="87" id="NFr-Is-aUN"/>
+                                            <constraint firstItem="gPl-hU-L3n" firstAttribute="leading" secondItem="DHe-tE-V0S" secondAttribute="leading" id="GtX-vo-0iu"/>
+                                            <constraint firstItem="gPl-hU-L3n" firstAttribute="top" secondItem="DHe-tE-V0S" secondAttribute="top" id="Odf-iU-G3e"/>
                                             <constraint firstAttribute="height" priority="250" constant="941" id="Xnc-hC-tbr"/>
-                                            <constraint firstAttribute="trailing" secondItem="XmN-mC-60T" secondAttribute="trailing" constant="87" id="alV-ca-i9P"/>
-                                            <constraint firstAttribute="bottom" secondItem="XmN-mC-60T" secondAttribute="bottom" constant="8" id="cuK-Q6-IxA"/>
-                                            <constraint firstItem="Ssh-LB-ssY" firstAttribute="top" secondItem="krg-vD-i10" secondAttribute="bottom" constant="242" id="eq0-RK-fox"/>
-                                            <constraint firstItem="XmN-mC-60T" firstAttribute="height" secondItem="Ssh-LB-ssY" secondAttribute="height" id="fg5-0d-fJH"/>
-                                            <constraint firstItem="krg-vD-i10" firstAttribute="top" secondItem="DHe-tE-V0S" secondAttribute="top" constant="70" id="j4z-1h-yiI"/>
-                                            <constraint firstItem="Ssh-LB-ssY" firstAttribute="centerX" secondItem="krg-vD-i10" secondAttribute="centerX" id="khB-1e-rYa"/>
-                                            <constraint firstItem="Ssh-LB-ssY" firstAttribute="leading" secondItem="DHe-tE-V0S" secondAttribute="leading" constant="87" id="zgt-MJ-D1h"/>
+                                            <constraint firstAttribute="trailing" secondItem="gPl-hU-L3n" secondAttribute="trailing" id="zGc-2u-nVU"/>
+                                            <constraint firstAttribute="bottom" secondItem="gPl-hU-L3n" secondAttribute="bottom" constant="660" id="zqY-N5-doJ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -927,6 +909,9 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1000"/>
+                    <connections>
+                        <outlet property="playerView" destination="gPl-hU-L3n" id="oGf-ox-ii8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ATP-Ev-qNh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -970,7 +955,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t01-sd-HQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.33333333333334" y="1028.5714285714284"/>
+            <point key="canvasLocation" x="-488" y="1033"/>
         </scene>
         <!--기사-->
         <scene sceneID="fpd-PV-Vtj">
@@ -1058,12 +1043,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -116,6 +116,14 @@ class LoginViewController: UIViewController, ASAuthorizationControllerDelegate, 
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let titleView = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width , height: (self.navigationController?.navigationBar.frame.height)!))
+        titleView.textAlignment = .center
+        titleView.textColor = .systemBlue
+        titleView.font = .systemFont(ofSize: 28, weight: .heavy)
+        titleView.text = "BTStream"
+        self.navigationItem.titleView = titleView
+        
         setAppleSignInButton()
         setGoogleSignInButton()
         // Do any additional setup after loading the view.
