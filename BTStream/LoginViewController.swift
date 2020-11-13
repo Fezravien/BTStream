@@ -29,15 +29,8 @@ class LoginViewController: UIViewController, ASAuthorizationControllerDelegate, 
     // Storyboard
     @IBOutlet weak var googleSignInButton: GIDSignInButton!
     
-        @IBAction func loginBtn(_ sender: Any) {
-            guard let tb = storyboard?.instantiateViewController(identifier: "tabBar") else {
-                return
-            }
-    
-            tb.modalPresentationStyle = .fullScreen
-    
-            present(tb, animated: true, completion: nil)
-        }
+
+        
     // Apple ID 로그인 버튼 생성
     func setAppleSignInButton() {
         let authorizationButton = ASAuthorizationAppleIDButton(type: .signIn, style: .whiteOutline)

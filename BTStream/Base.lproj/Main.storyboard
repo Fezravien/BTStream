@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nAm-3g-E1B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eBf-ae-1DO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -227,7 +227,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="eaH-yj-Tli" userLabel="TopLogoView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMA-3x-cFN">
                                         <rect key="frame" x="139" y="34" width="136" height="50"/>
@@ -245,7 +245,7 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="7Na-Mu-EVx">
-                                <rect key="frame" x="0.0" y="80" width="414" height="837"/>
+                                <rect key="frame" x="0.0" y="124" width="414" height="793"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKh-Wm-dl8">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="837"/>
@@ -379,14 +379,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xe5-70-9IY">
-                                <rect key="frame" x="168" y="429" width="78" height="48"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <action selector="loginBtn:" destination="nAm-3g-E1B" eventType="touchUpInside" id="ERG-kV-cSK"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IIU-7g-r09" customClass="UIStackView">
                                 <rect key="frame" x="87" y="104" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -397,14 +389,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsb-4O-kAd">
+                                <rect key="frame" x="164" y="547" width="73" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <segue destination="HpF-Q9-9K9" kind="show" id="l3J-5I-YCX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8y4-PX-oqm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Xe5-70-9IY" firstAttribute="centerY" secondItem="8y4-PX-oqm" secondAttribute="centerY" id="ZnZ-ec-Dak"/>
-                            <constraint firstItem="Xe5-70-9IY" firstAttribute="centerX" secondItem="8y4-PX-oqm" secondAttribute="centerX" id="osW-3Z-R03"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="WGX-70-YkB"/>
                     <connections>
                         <outlet property="appleSignInButton" destination="IIU-7g-r09" id="Fnl-v6-m3t"/>
                         <outlet property="googleSignInButton" destination="cq0-ET-s9b" id="bml-Kn-G5C"/>
@@ -412,12 +410,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVp-mo-2eG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-395" y="-833"/>
+            <point key="canvasLocation" x="569.56521739130437" y="-820.3125"/>
         </scene>
         <!--탭바-->
         <scene sceneID="NDW-7S-XL2">
             <objects>
-                <tabBarController storyboardIdentifier="tabBar" title="탭바" id="HpF-Q9-9K9" sceneMemberID="viewController">
+                <tabBarController title="탭바" id="HpF-Q9-9K9" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gtA-5G-M4b"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VYy-gF-0pD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -434,7 +432,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41j-O5-uaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="-820"/>
+            <point key="canvasLocation" x="1673.913043478261" y="-820.3125"/>
         </scene>
         <!--기사-->
         <scene sceneID="Q7s-u6-XUO">
@@ -1011,6 +1009,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CqI-jd-Eq6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5115.9420289855079" y="10.714285714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="S9f-4z-Th9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eBf-ae-1DO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qRy-gU-Y2O">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nAm-3g-E1B" kind="relationship" relationship="rootViewController" id="rij-Ld-0bO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I1y-YC-ywt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-396" y="-820"/>
         </scene>
     </scenes>
     <resources>
