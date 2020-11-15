@@ -5,20 +5,7 @@
 //  Created by 윤재웅 on 2020/10/30.
 //
 //
-//import UIKit
-//
-//class LoginViewController: UIViewController {
-//
-//    @IBAction func loginBtn(_ sender: Any) {
-//        guard let tb = storyboard?.instantiateViewController(identifier: "tabBar") else {
-//            return
-//        }
-//
-//        tb.modalPresentationStyle = .fullScreen
-//
-//        present(tb, animated: true, completion: nil)
-//    }
-//}
+import UIKit
 import AuthenticationServices
 import GoogleSignIn
 
@@ -29,7 +16,15 @@ class LoginViewController: UIViewController, ASAuthorizationControllerDelegate, 
     // Storyboard
     @IBOutlet weak var googleSignInButton: GIDSignInButton!
     
+    @IBAction func loginBtn(_ sender: Any) {
+        guard let tb = storyboard?.instantiateViewController(identifier: "tabBar") else {
+            return
+        }
 
+        tb.modalPresentationStyle = .fullScreen
+
+        present(tb, animated: true, completion: nil)
+    }
         
     // Apple ID 로그인 버튼 생성
     func setAppleSignInButton() {
