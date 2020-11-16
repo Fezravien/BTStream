@@ -43,7 +43,7 @@
                                         <state key="normal" title="BTStream"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="llj-TR-8QX" firstAttribute="centerX" secondItem="nvw-CW-qob" secondAttribute="centerX" id="DJh-a3-M3X"/>
                                     <constraint firstAttribute="bottom" secondItem="llj-TR-8QX" secondAttribute="bottom" constant="-4" id="b3Z-GR-u9x"/>
@@ -98,7 +98,7 @@
                                         <state key="normal" title="BTStream"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="W7H-Ph-IVQ" firstAttribute="top" secondItem="exC-SD-lKn" secondAttribute="top" constant="34" id="7lh-70-CcW"/>
                                     <constraint firstAttribute="height" constant="80" id="Sqz-Fo-u9z"/>
@@ -278,7 +278,7 @@
                                         <state key="normal" title="BTStream"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="BfS-Mo-mfQ"/>
                                     <constraint firstItem="mMA-3x-cFN" firstAttribute="centerX" secondItem="eaH-yj-Tli" secondAttribute="centerX" id="dsb-5V-NXk"/>
@@ -1119,9 +1119,6 @@
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiarySystemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
