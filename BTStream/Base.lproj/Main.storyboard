@@ -41,6 +41,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
                                         <state key="normal" title="BTStream"/>
+                                        <connections>
+                                            <action selector="homeBtn:" destination="D2S-0a-Qrp" eventType="touchUpInside" id="8YV-u3-hVz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -81,7 +84,7 @@
         <!--피드-->
         <scene sceneID="vGk-UE-nzG">
             <objects>
-                <viewController title="피드" id="UTv-A3-lu5" sceneMemberID="viewController">
+                <viewController title="피드" id="UTv-A3-lu5" customClass="FeedViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sne-l9-0fq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,6 +99,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
                                         <state key="normal" title="BTStream"/>
+                                        <connections>
+                                            <action selector="homebtn:" destination="UTv-A3-lu5" eventType="touchUpInside" id="uxq-3J-zYN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -564,30 +570,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="OPV-9o-hQE" userLabel="TopLogoView">
-                                <rect key="frame" x="0.0" y="8" width="414" height="80"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qy5-5Z-5IK">
-                                        <rect key="frame" x="139" y="34" width="136" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
-                                        <state key="normal" title="BTStream"/>
-                                    </button>
-                                </subviews>
-                                <viewLayoutGuide key="safeArea" id="CrN-g9-rvO"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="czF-dB-KTC"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="C7p-pW-CTj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="OPV-9o-hQE" firstAttribute="centerX" secondItem="C7p-pW-CTj" secondAttribute="centerX" id="ieN-9d-izC"/>
-                            <constraint firstItem="OPV-9o-hQE" firstAttribute="width" secondItem="rIC-dt-wR1" secondAttribute="width" id="jKl-ZW-JEv"/>
-                            <constraint firstItem="C7p-pW-CTj" firstAttribute="top" secondItem="OPV-9o-hQE" secondAttribute="top" constant="80" id="pRG-3R-qO3"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NmR-xG-qhQ"/>
                     <connections>
@@ -931,77 +916,6 @@
             </objects>
             <point key="canvasLocation" x="-704.34782608695662" y="275.22321428571428"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="BJ3-7o-sGp">
-            <objects>
-                <viewController id="K9r-1C-fbL" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bOw-fM-u9v">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="sc5-E9-y6H">
-                                <rect key="frame" x="0.0" y="44" width="414" height="922"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHe-tE-V0S">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="941"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="krg-vD-i10">
-                                                <rect key="frame" x="87" y="70" width="240" height="128"/>
-                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="128" id="gFO-pR-ncR"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ssh-LB-ssY">
-                                                <rect key="frame" x="87" y="440" width="240" height="128"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XmN-mC-60T">
-                                                <rect key="frame" x="87" y="805" width="240" height="128"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="XmN-mC-60T" firstAttribute="centerX" secondItem="DHe-tE-V0S" secondAttribute="centerX" id="3Y1-te-Gss"/>
-                                            <constraint firstItem="krg-vD-i10" firstAttribute="centerX" secondItem="DHe-tE-V0S" secondAttribute="centerX" id="BHC-xL-aJo"/>
-                                            <constraint firstItem="Ssh-LB-ssY" firstAttribute="height" secondItem="krg-vD-i10" secondAttribute="height" id="GvV-qu-1Po"/>
-                                            <constraint firstItem="krg-vD-i10" firstAttribute="leading" secondItem="DHe-tE-V0S" secondAttribute="leading" constant="87" id="NFr-Is-aUN"/>
-                                            <constraint firstAttribute="height" priority="250" constant="941" id="Xnc-hC-tbr"/>
-                                            <constraint firstAttribute="trailing" secondItem="XmN-mC-60T" secondAttribute="trailing" constant="87" id="alV-ca-i9P"/>
-                                            <constraint firstAttribute="bottom" secondItem="XmN-mC-60T" secondAttribute="bottom" constant="8" id="cuK-Q6-IxA"/>
-                                            <constraint firstItem="Ssh-LB-ssY" firstAttribute="top" secondItem="krg-vD-i10" secondAttribute="bottom" constant="242" id="eq0-RK-fox"/>
-                                            <constraint firstItem="XmN-mC-60T" firstAttribute="height" secondItem="Ssh-LB-ssY" secondAttribute="height" id="fg5-0d-fJH"/>
-                                            <constraint firstItem="krg-vD-i10" firstAttribute="top" secondItem="DHe-tE-V0S" secondAttribute="top" constant="70" id="j4z-1h-yiI"/>
-                                            <constraint firstItem="Ssh-LB-ssY" firstAttribute="centerX" secondItem="krg-vD-i10" secondAttribute="centerX" id="khB-1e-rYa"/>
-                                            <constraint firstItem="Ssh-LB-ssY" firstAttribute="leading" secondItem="DHe-tE-V0S" secondAttribute="leading" constant="87" id="zgt-MJ-D1h"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="DHe-tE-V0S" secondAttribute="trailing" id="FdR-iu-JiG"/>
-                                    <constraint firstItem="DHe-tE-V0S" firstAttribute="leading" secondItem="sc5-E9-y6H" secondAttribute="leading" id="I4H-0r-n8P"/>
-                                    <constraint firstItem="DHe-tE-V0S" firstAttribute="width" secondItem="sc5-E9-y6H" secondAttribute="width" id="QCe-qQ-QAb"/>
-                                    <constraint firstItem="DHe-tE-V0S" firstAttribute="top" secondItem="sc5-E9-y6H" secondAttribute="top" priority="250" id="fhC-MQ-3Kz"/>
-                                    <constraint firstAttribute="bottom" secondItem="DHe-tE-V0S" secondAttribute="bottom" priority="250" id="nY6-AC-XVg"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Nzh-Dz-jVQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Nzh-Dz-jVQ" firstAttribute="bottom" secondItem="sc5-E9-y6H" secondAttribute="bottom" id="es0-wk-d8e"/>
-                            <constraint firstItem="sc5-E9-y6H" firstAttribute="top" secondItem="Nzh-Dz-jVQ" secondAttribute="top" id="m2u-MV-D6i"/>
-                            <constraint firstItem="Nzh-Dz-jVQ" firstAttribute="trailing" secondItem="sc5-E9-y6H" secondAttribute="trailing" id="ola-n3-rvv"/>
-                            <constraint firstItem="sc5-E9-y6H" firstAttribute="leading" secondItem="Nzh-Dz-jVQ" secondAttribute="leading" id="yBe-KH-Cry"/>
-                        </constraints>
-                    </view>
-                    <size key="freeformSize" width="414" height="1000"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ATP-Ev-qNh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1368.1159420289855" y="1047.9910714285713"/>
-        </scene>
         <!--Youtube Player View Controller-->
         <scene sceneID="V2b-Qn-dDi">
             <objects>
@@ -1110,12 +1024,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
