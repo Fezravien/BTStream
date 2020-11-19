@@ -1031,6 +1031,17 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
                                     <state key="normal" title="BTStream"/>
+                                    <connections>
+                                        <action selector="homebtn:" destination="HOT-wI-FNQ" eventType="touchUpInside" id="Lbm-n7-d8e"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uck-3U-AW3">
+                                    <rect key="frame" x="349" y="10" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="moveed:" destination="HOT-wI-FNQ" eventType="touchUpInside" id="JU2-Ig-Em8"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1146,6 +1157,10 @@
                         <viewLayoutGuide key="safeArea" id="ltx-xs-Yud"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="ImageView" destination="owd-c0-2Td" id="LyL-rN-BZn"/>
+                        <outlet property="TextView" destination="4EW-rC-urC" id="C9K-z0-dBW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhu-cY-Qnu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -16,18 +16,18 @@ class FeedViewController: UITableViewController, FusumaDelegate {
     
     let storyBoard = UIStoryboard(name: "Main", bundle: nil) //Main.storyboard를 가리킴
     let fusuma = FusumaViewController()
-
+    
     
     var ref:DatabaseReference?
     var storageRef:StorageReference?
- 
+    
     
     var posts = [Post]()                //테이블 뷰에 표시될 포스트들을 담는 배열
     var loadedPosts = [Post]()          //Firebase에서 로드된 포스트들
     
-
     
-
+    
+    
     @IBAction func moveed(_ sender: Any) {
         fusumaTintColor = UIColor.black
         fusumaBaseTintColor = UIColor.black
@@ -38,25 +38,25 @@ class FeedViewController: UITableViewController, FusumaDelegate {
         fusuma.cropHeightRatio = 0.6 // Height-to-width ratio.
         fusuma.allowMultipleSelection = false
         fusumaSavesImage = true
-
+        
         self.present(fusuma, animated: false, completion: nil)
     }
     
-//    @IBAction func move(_ sender: AnyObject) {
-//        // Show Fusuma
-//
-//        fusumaTintColor = UIColor.black
-//        fusumaBaseTintColor = UIColor.black
-//        fusumaBackgroundColor = UIColor.white
-//
-//        fusuma.delegate = self
-//        //            fusuma.hasVideo = false
-//        fusuma.cropHeightRatio = 0.6 // Height-to-width ratio.
-//        fusuma.allowMultipleSelection = false
-//        fusumaSavesImage = true
-//
-//        present(fusuma, animated: true, completion: nil)
-//    }
+    //    @IBAction func move(_ sender: AnyObject) {
+    //        // Show Fusuma
+    //
+    //        fusumaTintColor = UIColor.black
+    //        fusumaBaseTintColor = UIColor.black
+    //        fusumaBackgroundColor = UIColor.white
+    //
+    //        fusuma.delegate = self
+    //        //            fusuma.hasVideo = false
+    //        fusuma.cropHeightRatio = 0.6 // Height-to-width ratio.
+    //        fusuma.allowMultipleSelection = false
+    //        fusumaSavesImage = true
+    //
+    //        present(fusuma, animated: true, completion: nil)
+    //    }
     
     @IBOutlet weak var FooterLabel: UILabel!
     //    @IBOutlet weak var FooterLabel: UILabel!
@@ -71,17 +71,17 @@ class FeedViewController: UITableViewController, FusumaDelegate {
     }
     
     func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
-//        var uploadController = UploadViewController() //텍스트 입력, 게시글 업로드를 위한 컨트롤러
+        //        var uploadController = UploadViewController() //텍스트 입력, 게시글 업로드를 위한 컨트롤러
         print("selected")
         self.fusuma.dismiss(animated: true)
-
-       let uploadController = storyBoard.instantiateViewController(withIdentifier: "UploadViewController") as! UploadViewController
+        
+        let uploadController = storyBoard.instantiateViewController(withIdentifier: "UploadViewController") as! UploadViewController
         uploadController.navigationItem.title = "업로드"
         
         uploadController.image = image
-
+        
         self.present(uploadController, animated: true, completion: nil)
-
+        
     }
     
     func fusumaVideoCompleted(withFileURL fileURL: URL) {
@@ -93,7 +93,7 @@ class FeedViewController: UITableViewController, FusumaDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
         ref = Database.database().reference()    //Firebase Database 루트를 가리키는 레퍼런스
         storageRef = Storage.storage().reference()    //Firebase Storage 루트를 가리키는 레퍼런스
         
@@ -102,10 +102,10 @@ class FeedViewController: UITableViewController, FusumaDelegate {
         refreshControl = UIRefreshControl()         //최신글을 불러 들이기 위한 refreshControl
         refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl?.addTarget(self, action: #selector(FeedViewController.refresh), for: UIControl.Event.valueChanged)              //refreshControl이 호출 될경우 TimelineViewController.refresh()가 호출 되도록한다.
-    
+        
         
     }
-   
+    
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -138,17 +138,17 @@ class FeedViewController: UITableViewController, FusumaDelegate {
                 let snapshotDatum = anyDatum as! DataSnapshot                                                                                                           // Any타입으로 변형된 DataSnapshot을 다시 DataSnapshot타입으로 변형, 여기서 snapshotDatum은 한 post를 담고 있다
                 let dicDatum = snapshotDatum.value as! [String:String]  //post의 value, 즉 [text:~~, date:~~]를 얻어옴
                 if let text = dicDatum["text"],
-                    let date = Int(dicDatum["date"]!){
+                   let date = Int(dicDatum["date"]!){
                     let post = Post(text,date)  //얻어온 데이터로 부터 Post생성
                     
                     //Get Image
                     let imageRef = self.storageRef?.child("\(snapshotDatum.key).jpg")   //앞에서 저장한 파일이름을 그대로 참조한다.
                     post.imageView.sd_setImage(with: imageRef!, placeholderImage: UIImage(), completion:{(image,error,cacheType,imageURL) in self.tableView.reloadData() })                                                                                                         //설정한 참조로 부터 이미지를 읽어온다. placeholderImage는 다운로드가 완료되기 전에 표시될 이미지. 이미지를 다 불러왔다면 Tableview를 갱신한다.
-                        
+                    
                     self.loadedPosts += [post]  //앞에서 Firebase로부터 얻어온 데이터를 post에 모두 옮겼고, 이를 loadedPosts에 저장
                 }
             }
-                                                            
+            
             self.posts += self.loadedPosts.prefix(g_NumPerOneLoad)  //loadedPosts에서 일부만 posts에 저장
             self.tableView.reloadData() //posts가 변하였으므로 tableView를 reload
         })
@@ -174,7 +174,7 @@ class FeedViewController: UITableViewController, FusumaDelegate {
                 let snapshotDatum = anyDatum as! DataSnapshot
                 let dicDatum = snapshotDatum.value as! [String:String]
                 if let text = dicDatum["text"],
-                    let date = Int(dicDatum["date"]!){
+                   let date = Int(dicDatum["date"]!){
                     let post = Post(text,date)
                     
                     //Get Image from URL
@@ -182,7 +182,7 @@ class FeedViewController: UITableViewController, FusumaDelegate {
                     post.imageView.sd_setImage(with: imageRef!, placeholderImage: UIImage(), completion:{(image,error,cacheType,imageURL) in self.tableView.reloadData() })                                                                                                         //설정한 참조로 부터 이미지를 읽어온다. placeholderImage는 다운로드가 완료되기 전에 표시될 이미지
                     
                     freshPostsChunk += [post]
-                        
+                    
                 }
             }
             self.loadedPosts.insert(contentsOf: freshPostsChunk, at: 0)
@@ -216,13 +216,23 @@ class FeedViewController: UITableViewController, FusumaDelegate {
             print(" you reached end of the table")
             loadPastPosts()
         }
+        //        @IBAction func homebtn(_ sender: Any) {
+        //            guard let hb = storyboard?.instantiateViewController(identifier: "tabBar") else {
+        //                return
+        //            }
+        //
+        //            hb.modalPresentationStyle = .fullScreen
+        //
+        //            present(hb, animated: true, completion: nil)
+        //        }
+    }
     @IBAction func homebtn(_ sender: Any) {
         guard let hb = storyboard?.instantiateViewController(identifier: "tabBar") else {
             return
         }
-
+        
         hb.modalPresentationStyle = .fullScreen
-
+        
         present(hb, animated: true, completion: nil)
     }
 }
