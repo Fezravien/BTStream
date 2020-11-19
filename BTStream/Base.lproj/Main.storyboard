@@ -573,6 +573,79 @@
             </objects>
             <point key="canvasLocation" x="3230" y="585"/>
         </scene>
+        <!--Members Player View Controller-->
+        <scene sceneID="KW2-QW-ubg">
+            <objects>
+                <viewController storyboardIdentifier="memberPlayer" id="mdh-Z3-iUb" customClass="MembersPlayerViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HwI-BH-QEt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="250" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="16v-LP-hdz">
+                                <rect key="frame" x="0.0" y="34" width="414" height="838"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="82f-dw-Quu">
+                                    <rect key="frame" x="0.0" y="306" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memCell" rowHeight="250" id="P5V-UO-lse" customClass="memCell" customModule="BTStream" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P5V-UO-lse" id="i7d-hZ-euw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjo-yG-Lf4">
+                                                    <rect key="frame" x="10" y="180" width="394" height="60"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GMQ-C9-eal">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="180" id="8Jw-Ok-L66"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gjo-yG-Lf4" firstAttribute="leading" secondItem="i7d-hZ-euw" secondAttribute="leading" constant="10" id="5A7-dz-yry"/>
+                                                <constraint firstItem="GMQ-C9-eal" firstAttribute="leading" secondItem="i7d-hZ-euw" secondAttribute="leading" id="Bib-CA-7N1"/>
+                                                <constraint firstItem="GMQ-C9-eal" firstAttribute="top" secondItem="i7d-hZ-euw" secondAttribute="top" id="E88-tl-l2D"/>
+                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gjo-yG-Lf4" secondAttribute="trailing" constant="10" id="Mg2-sa-gzA"/>
+                                                <constraint firstItem="gjo-yG-Lf4" firstAttribute="top" secondItem="GMQ-C9-eal" secondAttribute="bottom" id="QXP-OP-xtA"/>
+                                                <constraint firstItem="GMQ-C9-eal" firstAttribute="centerX" secondItem="i7d-hZ-euw" secondAttribute="centerX" id="jrd-mh-cyS"/>
+                                                <constraint firstAttribute="trailing" secondItem="GMQ-C9-eal" secondAttribute="trailing" id="pqu-bV-hkM"/>
+                                                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="gjo-yG-Lf4" secondAttribute="bottom" constant="10" id="q1T-Qh-SHi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="memimg" destination="GMQ-C9-eal" id="3vf-ZD-eUB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mdh-Z3-iUb" id="zno-l5-uYI"/>
+                                    <outlet property="delegate" destination="mdh-Z3-iUb" id="D6k-HU-HoS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ApQ-OG-1Jk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="16v-LP-hdz" firstAttribute="bottom" secondItem="ApQ-OG-1Jk" secondAttribute="bottom" constant="10" id="ebZ-x5-Y4u"/>
+                            <constraint firstItem="ApQ-OG-1Jk" firstAttribute="top" secondItem="16v-LP-hdz" secondAttribute="top" constant="10" id="rl2-Dv-sNK"/>
+                            <constraint firstItem="16v-LP-hdz" firstAttribute="leading" secondItem="ApQ-OG-1Jk" secondAttribute="leading" id="sH5-i1-2Lu"/>
+                            <constraint firstItem="ApQ-OG-1Jk" firstAttribute="trailing" secondItem="16v-LP-hdz" secondAttribute="trailing" id="wkb-3N-5Lp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oxt-N0-awe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-846.37681159420299" y="-789.50892857142856"/>
+        </scene>
         <!--Members View Controller-->
         <scene sceneID="1Ez-gz-epg">
             <objects>
@@ -672,7 +745,7 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecommendCell" id="UHz-BA-sCr" customClass="RecommendCell" customModule="BTStream" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="35" width="160" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eoL-5y-O6g">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hoj-Lt-8Uq">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -682,9 +755,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="5pm-Cx-SDS" secondAttribute="trailing" id="Ciu-IV-YUM"/>
-                                                <constraint firstItem="5pm-Cx-SDS" firstAttribute="leading" secondItem="eoL-5y-O6g" secondAttribute="leading" id="mcO-rl-dXN"/>
+                                                <constraint firstItem="5pm-Cx-SDS" firstAttribute="leading" secondItem="hoj-Lt-8Uq" secondAttribute="leading" id="mcO-rl-dXN"/>
                                                 <constraint firstAttribute="bottom" secondItem="5pm-Cx-SDS" secondAttribute="bottom" id="ouk-aj-v9p"/>
-                                                <constraint firstItem="5pm-Cx-SDS" firstAttribute="top" secondItem="eoL-5y-O6g" secondAttribute="top" id="ybJ-ar-ZdQ"/>
+                                                <constraint firstItem="5pm-Cx-SDS" firstAttribute="top" secondItem="hoj-Lt-8Uq" secondAttribute="top" id="ybJ-ar-ZdQ"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -874,7 +947,7 @@
         <!--Youtube Player View Controller-->
         <scene sceneID="V2b-Qn-dDi">
             <objects>
-                <viewController id="8qD-eq-XVm" customClass="YoutubePlayerViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="player" id="8qD-eq-XVm" customClass="YoutubePlayerViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="utk-w8-gGZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -886,25 +959,17 @@
                                     <constraint firstAttribute="height" constant="260" id="IH6-WQ-md6"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KqM-Ls-fVC">
-                                <rect key="frame" x="20" y="354" width="374" height="258"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9BE-qC-MJ0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9BE-qC-MJ0" firstAttribute="bottom" secondItem="KqM-Ls-fVC" secondAttribute="bottom" constant="250" id="1n8-PL-yqP"/>
-                            <constraint firstItem="9BE-qC-MJ0" firstAttribute="trailing" secondItem="KqM-Ls-fVC" secondAttribute="trailing" constant="20" id="7xi-fT-rGj"/>
                             <constraint firstItem="7e9-rl-Gpc" firstAttribute="top" secondItem="9BE-qC-MJ0" secondAttribute="top" id="9I6-gM-G78"/>
                             <constraint firstItem="7e9-rl-Gpc" firstAttribute="leading" secondItem="9BE-qC-MJ0" secondAttribute="leading" id="Gyc-0d-ikH"/>
-                            <constraint firstItem="KqM-Ls-fVC" firstAttribute="top" secondItem="7e9-rl-Gpc" secondAttribute="bottom" constant="50" id="LKg-0a-XSW"/>
                             <constraint firstItem="9BE-qC-MJ0" firstAttribute="trailing" secondItem="7e9-rl-Gpc" secondAttribute="trailing" id="cWw-3A-QSY"/>
-                            <constraint firstItem="KqM-Ls-fVC" firstAttribute="leading" secondItem="9BE-qC-MJ0" secondAttribute="leading" constant="20" id="k0H-uk-Ecc"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="playerView" destination="7e9-rl-Gpc" id="QwQ-8W-0K0"/>
-                        <outlet property="thumbnail" destination="KqM-Ls-fVC" id="xFG-lI-7bg"/>
+                        <outlet property="playerView" destination="7e9-rl-Gpc" id="kGK-js-COO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t01-sd-HQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

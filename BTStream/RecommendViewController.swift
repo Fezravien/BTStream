@@ -30,6 +30,17 @@ extension RecommendViewController: UICollectionViewDataSource {
     
 }
 
+extension RecommendViewController:UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let player = storyboard?.instantiateViewController(identifier: "player") else {
+            return
+        }
+        
+
+        present(player, animated: true, completion: nil)
+    }
+}
+
 extension RecommendViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 50, height: 40)

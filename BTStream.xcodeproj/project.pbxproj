@@ -10,6 +10,7 @@
 		0DA2396BC77B83DDD4F30E53 /* Pods_BTStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0AD740ACEBA284567459C37 /* Pods_BTStream.framework */; };
 		267E951D2554F6FD00AEDAB2 /* Type1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267E951C2554F6FD00AEDAB2 /* Type1.swift */; };
 		267E9520255518CD00AEDAB2 /* NewsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267E951F255518CD00AEDAB2 /* NewsDetailController.swift */; };
+		BA12738225665D4800B168A2 /* MembersPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA12738125665D4800B168A2 /* MembersPlayerViewController.swift */; };
 		26BED1412563A982004F4B5A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BED1402563A982004F4B5A /* Data.swift */; };
 		26BED1442563AF0F004F4B5A /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BED1432563AF0F004F4B5A /* UploadViewController.swift */; };
 		26BED1902563B601004F4B5A /* FeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BED18F2563B601004F4B5A /* FeedViewCell.swift */; };
@@ -46,6 +47,7 @@
 		26FA4C46254EA1330008BA7F /* BTStream.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BTStream.entitlements; sourceTree = "<group>"; };
 		94FD808D7390FDF06495F90F /* Pods-BTStream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BTStream.release.xcconfig"; path = "Target Support Files/Pods-BTStream/Pods-BTStream.release.xcconfig"; sourceTree = "<group>"; };
 		B0AD740ACEBA284567459C37 /* Pods_BTStream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BTStream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA12738125665D4800B168A2 /* MembersPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersPlayerViewController.swift; sourceTree = "<group>"; };
 		BAB6849925554EE300BD5AF9 /* MembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
 		BAB684B12555645400BD5AF9 /* MembersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersCell.swift; sourceTree = "<group>"; };
 		BAB684B42555737300BD5AF9 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				BAD86A80254C36E3009351AE /* LoginViewController.swift */,
 				BAD86A83254C36F6009351AE /* HomeViewController.swift */,
 				BAB6849925554EE300BD5AF9 /* MembersViewController.swift */,
+				BA12738125665D4800B168A2 /* MembersPlayerViewController.swift */,
 				BAB684B42555737300BD5AF9 /* RecommendViewController.swift */,
 				BAB684BE255598C200BD5AF9 /* RecommendCell.swift */,
 				BAB684B12555645400BD5AF9 /* MembersCell.swift */,
@@ -297,6 +300,7 @@
 				BAB684BF255598C200BD5AF9 /* RecommendCell.swift in Sources */,
 				BAD86A81254C36E3009351AE /* LoginViewController.swift in Sources */,
 				BAD86A8E254C372D009351AE /* NewsViewController.swift in Sources */,
+				BA12738225665D4800B168A2 /* MembersPlayerViewController.swift in Sources */,
 				BAD86A6C254BFF9E009351AE /* AppDelegate.swift in Sources */,
 				BAB684B22555645400BD5AF9 /* MembersCell.swift in Sources */,
 				BAD86A91254C373D009351AE /* FeedViewController.swift in Sources */,
