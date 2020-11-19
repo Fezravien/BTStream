@@ -10,12 +10,6 @@
 		0DA2396BC77B83DDD4F30E53 /* Pods_BTStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0AD740ACEBA284567459C37 /* Pods_BTStream.framework */; };
 		267E951D2554F6FD00AEDAB2 /* Type1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267E951C2554F6FD00AEDAB2 /* Type1.swift */; };
 		267E9520255518CD00AEDAB2 /* NewsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267E951F255518CD00AEDAB2 /* NewsDetailController.swift */; };
-		26BED1412563A982004F4B5A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BED1402563A982004F4B5A /* Data.swift */; };
-		26BED1442563AF0F004F4B5A /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BED1432563AF0F004F4B5A /* UploadViewController.swift */; };
-		26BED1902563B601004F4B5A /* FeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BED18F2563B601004F4B5A /* FeedViewCell.swift */; };
-		26BED1942563B82B004F4B5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26BED1932563B82B004F4B5A /* GoogleService-Info.plist */; };
-		26BED1972563B83E004F4B5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26BED1962563B83E004F4B5A /* GoogleService-Info.plist */; };
-		26BED1B42563BAF8004F4B5A /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BED1B32563BAF8004F4B5A /* AddFeedViewController.swift */; };
 		BAB6849A25554EE300BD5AF9 /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB6849925554EE300BD5AF9 /* MembersViewController.swift */; };
 		BAB684B22555645400BD5AF9 /* MembersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB684B12555645400BD5AF9 /* MembersCell.swift */; };
 		BAB684B52555737300BD5AF9 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB684B42555737300BD5AF9 /* RecommendViewController.swift */; };
@@ -37,12 +31,6 @@
 /* Begin PBXFileReference section */
 		267E951C2554F6FD00AEDAB2 /* Type1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type1.swift; sourceTree = "<group>"; };
 		267E951F255518CD00AEDAB2 /* NewsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailController.swift; sourceTree = "<group>"; };
-		26BED1402563A982004F4B5A /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		26BED1432563AF0F004F4B5A /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
-		26BED18F2563B601004F4B5A /* FeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewCell.swift; sourceTree = "<group>"; };
-		26BED1932563B82B004F4B5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		26BED1962563B83E004F4B5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		26BED1B32563BAF8004F4B5A /* AddFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
 		26FA4C46254EA1330008BA7F /* BTStream.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BTStream.entitlements; sourceTree = "<group>"; };
 		94FD808D7390FDF06495F90F /* Pods-BTStream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BTStream.release.xcconfig"; path = "Target Support Files/Pods-BTStream/Pods-BTStream.release.xcconfig"; sourceTree = "<group>"; };
 		B0AD740ACEBA284567459C37 /* Pods_BTStream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BTStream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,16 +104,10 @@
 				BAD86A90254C373D009351AE /* FeedViewController.swift */,
 				BAD86A93254C3755009351AE /* SetViewController.swift */,
 				BAD86A74254BFFA0009351AE /* Assets.xcassets */,
-				26BED1932563B82B004F4B5A /* GoogleService-Info.plist */,
 				BAD86A76254BFFA0009351AE /* LaunchScreen.storyboard */,
 				BAD86A79254BFFA0009351AE /* Info.plist */,
 				267E951C2554F6FD00AEDAB2 /* Type1.swift */,
 				267E951F255518CD00AEDAB2 /* NewsDetailController.swift */,
-				26BED1402563A982004F4B5A /* Data.swift */,
-				26BED1962563B83E004F4B5A /* GoogleService-Info.plist */,
-				26BED1432563AF0F004F4B5A /* UploadViewController.swift */,
-				26BED18F2563B601004F4B5A /* FeedViewCell.swift */,
-				26BED1B32563BAF8004F4B5A /* AddFeedViewController.swift */,
 			);
 			path = BTStream;
 			sourceTree = "<group>";
@@ -212,7 +194,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD86A78254BFFA0009351AE /* LaunchScreen.storyboard in Resources */,
-				26BED1942563B82B004F4B5A /* GoogleService-Info.plist in Resources */,
 				BAD86A75254BFFA0009351AE /* Assets.xcassets in Resources */,
 				BAD86A73254BFF9E009351AE /* Main.storyboard in Resources */,
 			);
@@ -285,9 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD86A8B254C3723009351AE /* CalendarViewController.swift in Sources */,
-				26BED1442563AF0F004F4B5A /* UploadViewController.swift in Sources */,
 				267E9520255518CD00AEDAB2 /* NewsDetailController.swift in Sources */,
-				26BED1B42563BAF8004F4B5A /* AddFeedViewController.swift in Sources */,
 				BAB6849A25554EE300BD5AF9 /* MembersViewController.swift in Sources */,
 				BAD86A94254C3755009351AE /* SetViewController.swift in Sources */,
 				267E951D2554F6FD00AEDAB2 /* Type1.swift in Sources */,
@@ -299,10 +278,8 @@
 				BAB684B22555645400BD5AF9 /* MembersCell.swift in Sources */,
 				BAD86A91254C373D009351AE /* FeedViewController.swift in Sources */,
 				BAB684FD255AC3DD00BD5AF9 /* YoutubePlayerViewController.swift in Sources */,
-				26BED1902563B601004F4B5A /* FeedViewCell.swift in Sources */,
 				BAD86A6E254BFF9E009351AE /* SceneDelegate.swift in Sources */,
 				BAB684B52555737300BD5AF9 /* RecommendViewController.swift in Sources */,
-				26BED1412563A982004F4B5A /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
