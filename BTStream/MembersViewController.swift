@@ -35,6 +35,14 @@ extension MembersViewController: UICollectionViewDataSource {
 }
 
 extension MembersViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let mem = members[indexPath.item]
+        
+        guard let members = storyboard?.instantiateViewController(identifier: "memberPlayer") else {
+            return
+        }
+        present(members, animated: true, completion: nil)
+    }
     
 }
 
