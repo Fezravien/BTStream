@@ -29,11 +29,18 @@ class UploadViewController: UIViewController, UITextViewDelegate {
         
         self.TextView.delegate = self
         textViewDidEndEditing(TextView)
-//        let tapDismiss = UITapGestureRecognizer(target:self,action:#selector(UIInputViewController.dismissKeyboard))
-//        self.view.addGestureRecognizer(tapDismiss)
-        
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action:#selector(uploadPost))
-        self.navigationItem.rightBarButtonItem = addButton
+        let tapDismiss = UITapGestureRecognizer(target:self,action:#selector(UIInputViewController.dismissKeyboard))
+        self.view.addGestureRecognizer(tapDismiss)
+//
+//        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action:#selector(uploadPost))
+//        self.navigationItem.rightBarButtonItem = addButton
+
+        let addButton = UIButton(type: .contactAdd)
+        addButton.addTarget(self, action: #selector(uploadPost), for: .touchUpInside)
+        addButton.layer.position = CGPoint(x: self.view.frame.width - 50, y: 50)
+
+        self.view.addSubview(addButton)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,6 +71,8 @@ class UploadViewController: UIViewController, UITextViewDelegate {
     }
     override func viewDidDisappear(_ animated: Bool) {
         self.TextView.isEditable = false
+        print("viewDidDisappear")
+
     }
     
     //MARK: - ImageView
@@ -73,6 +82,8 @@ class UploadViewController: UIViewController, UITextViewDelegate {
     }
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        print("viewWillDisappear")
+
     }
     @objc func uploadPost(){
         var curRef = self.ref?.child("posts").childByAutoId()
@@ -96,11 +107,13 @@ class UploadViewController: UIViewController, UITextViewDelegate {
         }
         imageRef?.putData(uploadData, metadata: nil, completion:{ metadata, error in
             if let error = error {
+                print("putdata error")
                 // 에러 발생
             } else {
                 // Metadata는 size, content-type, download URL과 같은 컨텐트의 메타데이터를 가진다
             }
         })
-        self.navigationController?.popToRootViewController(animated: .init())
+        self.dismiss(animated: true)
+//        self.navigationController?.popToRootViewController(animated: true)
     }
 }

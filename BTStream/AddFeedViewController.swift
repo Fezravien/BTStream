@@ -24,13 +24,14 @@ class AddFeedViewController: UINavigationController,FusumaDelegate {
         //            fusuma.hasVideo = false
         fusuma.cropHeightRatio = 0.6 // Height-to-width ratio.
         fusuma.allowMultipleSelection = false
-        //            fusuma.defaultMode = .library
+//                    fusuma.defaultMode = .library
         
-        fusuma.hidesBottomBarWhenPushed = true
+        
         
         uploadController = storyBoard.instantiateViewController(withIdentifier: "UploadViewController") as! UploadViewController
         uploadController.navigationItem.title = "업로드"
-        
+
+
         self.pushViewController(fusuma, animated: false)
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -42,11 +43,13 @@ class AddFeedViewController: UINavigationController,FusumaDelegate {
     }
     func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
         uploadController.image = image
+
         self.pushViewController(uploadController, animated: true)
+
         print("push")
     }
     func fusumaWillClosed() {
-//        self.popToRootViewController(animated: .init())
+        self.popToRootViewController(animated: true)
     }
     
     // Return the image but called after is dismissed.
