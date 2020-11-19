@@ -500,8 +500,8 @@
                         <segue destination="0j7-4a-mjy" kind="relationship" relationship="viewControllers" id="hpD-Az-fIB"/>
                         <segue destination="D2S-0a-Qrp" kind="relationship" relationship="viewControllers" id="TGg-qb-mdb"/>
                         <segue destination="6rL-ee-dgf" kind="relationship" relationship="viewControllers" id="WmV-6Q-niV"/>
-                        <segue destination="Enx-MT-Lie" kind="relationship" relationship="viewControllers" id="hPW-Fh-d4k"/>
                         <segue destination="HOT-wI-FNQ" kind="relationship" relationship="viewControllers" id="UEV-iS-fJd"/>
+                        <segue destination="Enx-MT-Lie" kind="relationship" relationship="viewControllers" id="hPW-Fh-d4k"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41j-O5-uaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1093,23 +1093,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="WWt-hi-MSr">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" id="xOY-a0-3oD" userLabel="TopLogoView">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJ0-5X-Mts">
-                                    <rect key="frame" x="320" y="0.0" width="86" height="40"/>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geZ-lz-xZx">
+                                    <rect key="frame" x="139" y="0.0" width="136" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <connections>
-                                        <action selector="moveed:" destination="HOT-wI-FNQ" eventType="touchUpInside" id="uv1-hx-dsA"/>
-                                    </connections>
+                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                    <state key="normal" title="BTStream"/>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      dfdfdfdf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lsw-RH-jbz">
-                            <rect key="frame" x="0.0" y="412" width="414" height="21"/>
+                            <rect key="frame" x="0.0" y="418" width="414" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
@@ -1117,7 +1115,7 @@
                         </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineCell" rowHeight="312" id="vv2-Wj-yRm" customClass="FeedViewCell" customModule="BTStream" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="312"/>
+                                <rect key="frame" x="0.0" y="78" width="414" height="312"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vv2-Wj-yRm" id="Onx-Dg-YaA">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="312"/>
@@ -1158,7 +1156,7 @@
                             <outlet property="delegate" destination="HOT-wI-FNQ" id="i2F-GE-M17"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="피드" selectedImage="list.bullet.below.rectangle" catalog="system" id="e2h-EV-E29"/>
+                    <tabBarItem key="tabBarItem" title="피드" image="list.bullet.below.rectangle" catalog="system" id="e2h-EV-E29"/>
                     <navigationItem key="navigationItem" id="Y38-4P-1dq">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="bsZ-hS-wec">
                             <connections>
