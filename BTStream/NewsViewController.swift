@@ -10,32 +10,28 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         let originalString = "http://newsapi.org/v2/everything?q=방탄소년단&apiKey=568fe86ad1fb4b7a9ebfdfe63a80ed74"
         let escapedString = originalString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
 
-        // 기사 비동기 처리
-        DispatchQueue.global(qos: .background).async {
-            
-    
-            let task = URLSession.shared.dataTask(with: URL(string: escapedString!)!) { (data, response, error) in
-                if let datajson = data {
+
+        let task = URLSession.shared.dataTask(with: URL(string: escapedString!)!) { (data, response, error) in
+            if let datajson = data {
+                
+                do {
+                    let json = try JSONSerialization.jsonObject(with: datajson, options: []) as! Dictionary<String ,Any>
                     
-                    do {
-                        let json = try JSONSerialization.jsonObject(with: datajson, options: []) as! Dictionary<String ,Any>
-                        
-                        let articles = json["articles"] as! Array<Dictionary<String, Any>>
-                        //         print(articles)
-                        
-                        self.newsData = articles
-                        DispatchQueue.main.async{
-                            self.tableViewMain.reloadData()
-                        }
-                        
-                    } catch  {
-                        
+                    let articles = json["articles"] as! Array<Dictionary<String, Any>>
+                    //         print(articles)
+                    
+                    self.newsData = articles
+                    DispatchQueue.main.async{
+                        self.tableViewMain.reloadData()
                     }
+                    
+                } catch  {
+                    
                 }
             }
-            
-            task.resume()
         }
+        
+        task.resume()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let news = newsData{
