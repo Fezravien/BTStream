@@ -216,5 +216,13 @@ class FeedViewController: UITableViewController, FusumaDelegate {
             print(" you reached end of the table")
             loadPastPosts()
         }
+    @IBAction func homebtn(_ sender: Any) {
+        guard let hb = storyboard?.instantiateViewController(identifier: "tabBar") else {
+            return
+        }
+
+        hb.modalPresentationStyle = .fullScreen
+
+        present(hb, animated: true, completion: nil)
     }
 }
