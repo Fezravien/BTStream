@@ -5,116 +5,9 @@
 //  Created by 윤재웅 on 2020/10/30.
 //
 
-
 import UIKit
-import FirebaseDatabase
-import FirebaseStorage
-import FirebaseUI
-import Fusuma
 
-class FeedViewController: UITableViewController, FusumaDelegate {
-    
-    let storyBoard = UIStoryboard(name: "Main", bundle: nil) //Main.storyboard를 가리킴
-    let fusuma = FusumaViewController()
-
-    
-    var ref:DatabaseReference?
-    var storageRef:StorageReference?
- 
-    
-    var posts = [Post]()                //테이블 뷰에 표시될 포스트들을 담는 배열
-    var loadedPosts = [Post]()          //Firebase에서 로드된 포스트들
-    
-
-    
-
-    @IBAction func moveed(_ sender: Any) {
-        fusumaTintColor = UIColor.black
-        fusumaBaseTintColor = UIColor.black
-        fusumaBackgroundColor = UIColor.white
-        
-        fusuma.delegate = self
-        //            fusuma.hasVideo = false
-        fusuma.cropHeightRatio = 0.6 // Height-to-width ratio.
-        fusuma.allowMultipleSelection = false
-        fusumaSavesImage = true
-
-        self.present(fusuma, animated: false, completion: nil)
-    }
-    
-//    @IBAction func move(_ sender: AnyObject) {
-//        // Show Fusuma
-//
-//        fusumaTintColor = UIColor.black
-//        fusumaBaseTintColor = UIColor.black
-//        fusumaBackgroundColor = UIColor.white
-//
-//        fusuma.delegate = self
-//        //            fusuma.hasVideo = false
-//        fusuma.cropHeightRatio = 0.6 // Height-to-width ratio.
-//        fusuma.allowMultipleSelection = false
-//        fusumaSavesImage = true
-//
-//        present(fusuma, animated: true, completion: nil)
-//    }
-    
-    @IBOutlet weak var FooterLabel: UILabel!
-    //    @IBOutlet weak var FooterLabel: UILabel!
-    //    @IBOutlet weak var FooterLabel: UILabel!    //loading..메세지를 표시할 라벨
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    func fusumaMultipleImageSelected(_ images: [UIImage], source: FusumaMode) {
-    }
-    
-    func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
-//        var uploadController = UploadViewController() //텍스트 입력, 게시글 업로드를 위한 컨트롤러
-        print("selected")
-        self.fusuma.dismiss(animated: true)
-
-       let uploadController = storyBoard.instantiateViewController(withIdentifier: "UploadViewController") as! UploadViewController
-        uploadController.navigationItem.title = "업로드"
-        
-        uploadController.image = image
-
-        self.present(uploadController, animated: true, completion: nil)
-
-    }
-    
-    func fusumaVideoCompleted(withFileURL fileURL: URL) {
-    }
-    
-    func fusumaCameraRollUnauthorized() {
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-
-        ref = Database.database().reference()    //Firebase Database 루트를 가리키는 레퍼런스
-        storageRef = Storage.storage().reference()    //Firebase Storage 루트를 가리키는 레퍼런스
-        
-        loadPosts()     //Firebase에서 포스트들을 불러들임
-        
-        refreshControl = UIRefreshControl()         //최신글을 불러 들이기 위한 refreshControl
-        refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refreshControl?.addTarget(self, action: #selector(FeedViewController.refresh), for: UIControl.Event.valueChanged)              //refreshControl이 호출 될경우 TimelineViewController.refresh()가 호출 되도록한다.
-    
-        
-    }
-   
-    
-    // MARK: - Table view data source
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1    //섹션은 하나
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.posts.count //row의 수는 post의 수만큼
-    }
+class FeedViewController: UIViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineCell", for: indexPath) as! FeedViewCell                          //TimelineCell ID에 해당하는 TableViewCell을 얻어오고 TimelineTableViewCell로 캐스팅한다. 이를 cell에 할당한다.
@@ -216,5 +109,13 @@ class FeedViewController: UITableViewController, FusumaDelegate {
             print(" you reached end of the table")
             loadPastPosts()
         }
+    @IBAction func homebtn(_ sender: Any) {
+        guard let hb = storyboard?.instantiateViewController(identifier: "tabBar") else {
+            return
+        }
+
+        hb.modalPresentationStyle = .fullScreen
+
+        present(hb, animated: true, completion: nil)
     }
 }
