@@ -267,14 +267,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Type3" id="ghG-dg-SF1" customClass="Type3" customModule="BTStream" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ghG-dg-SF1" id="U7E-i5-K7l">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHu-am-YgL">
-                                                    <rect key="frame" x="20" y="11" width="374" height="21.5"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -603,7 +603,7 @@
                         <segue destination="0j7-4a-mjy" kind="relationship" relationship="viewControllers" id="hpD-Az-fIB"/>
                         <segue destination="D2S-0a-Qrp" kind="relationship" relationship="viewControllers" id="TGg-qb-mdb"/>
                         <segue destination="6rL-ee-dgf" kind="relationship" relationship="viewControllers" id="WmV-6Q-niV"/>
-                        <segue destination="HOT-wI-FNQ" kind="relationship" relationship="viewControllers" id="UEV-iS-fJd"/>
+                        <segue destination="wWB-N5-HFy" kind="relationship" relationship="viewControllers" id="UEV-iS-fJd"/>
                         <segue destination="Enx-MT-Lie" kind="relationship" relationship="viewControllers" id="hPW-Fh-d4k"/>
                     </connections>
                 </tabBarController>
@@ -1161,7 +1161,7 @@
             </objects>
             <point key="canvasLocation" x="2743" y="-838"/>
         </scene>
-        <!--피드-->
+        <!--Feed View Controller-->
         <scene sceneID="Sau-fe-LoE">
             <objects>
                 <tableViewController id="HOT-wI-FNQ" customClass="FeedViewController" customModule="BTStream" customModuleProvider="target" sceneMemberID="viewController">
@@ -1169,32 +1169,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" id="xOY-a0-3oD" userLabel="TopLogoView">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geZ-lz-xZx">
-                                    <rect key="frame" x="139" y="0.0" width="136" height="50"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
-                                    <state key="normal" title="BTStream"/>
-                                    <connections>
-                                        <action selector="homebtn:" destination="HOT-wI-FNQ" eventType="touchUpInside" id="Lbm-n7-d8e"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uck-3U-AW3">
-                                    <rect key="frame" x="349" y="10" width="46" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <connections>
-                                        <action selector="moveed:" destination="HOT-wI-FNQ" eventType="touchUpInside" id="JU2-Ig-Em8"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                        </view>
                         <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      dfdfdfdf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lsw-RH-jbz">
-                            <rect key="frame" x="0.0" y="418" width="414" height="21"/>
+                            <rect key="frame" x="0.0" y="368" width="414" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
@@ -1202,7 +1178,7 @@
                         </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineCell" rowHeight="312" id="vv2-Wj-yRm" customClass="FeedViewCell" customModule="BTStream" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="78" width="414" height="312"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="312"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vv2-Wj-yRm" id="Onx-Dg-YaA">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="312"/>
@@ -1243,11 +1219,10 @@
                             <outlet property="delegate" destination="HOT-wI-FNQ" id="i2F-GE-M17"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="피드" image="list.bullet.below.rectangle" catalog="system" id="e2h-EV-E29"/>
                     <navigationItem key="navigationItem" id="Y38-4P-1dq">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="bsZ-hS-wec">
                             <connections>
-                                <action selector="move:" destination="HOT-wI-FNQ" id="KTp-9U-zzV"/>
+                                <action selector="moveee:" destination="HOT-wI-FNQ" id="EUc-c6-V2s"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1258,7 +1233,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vpl-tA-q3u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3550.7246376811595" y="-95.089285714285708"/>
+            <point key="canvasLocation" x="4460.8695652173919" y="-95.089285714285708"/>
         </scene>
         <!--Add Feed View Controller-->
         <scene sceneID="OHf-W1-4wW">
@@ -1277,7 +1252,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKk-uB-ILe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4261" y="-95"/>
+            <point key="canvasLocation" x="5171.0144927536239" y="-95.089285714285708"/>
         </scene>
         <!--Upload View Controller-->
         <scene sceneID="aKY-ZL-i1E">
@@ -1291,13 +1266,12 @@
                                 <rect key="frame" x="20" y="319" width="374" height="215"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex </string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="owd-c0-2Td">
-                                <rect key="frame" x="20" y="69" width="374" height="202"/>
+                                <rect key="frame" x="20" y="69" width="374" height="242"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -1311,7 +1285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhu-cY-Qnu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4930" y="-95"/>
+            <point key="canvasLocation" x="5839.130434782609" y="-95.089285714285708"/>
         </scene>
         <!--개발자에게 문의하기-->
         <scene sceneID="25p-Zh-52N">
@@ -1349,6 +1323,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llj-V5-nQ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5121.739130434783" y="-871.20535714285711"/>
+        </scene>
+        <!--피드-->
+        <scene sceneID="i5y-ed-7a7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wWB-N5-HFy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="피드" image="list.bullet.below.rectangle" catalog="system" id="e2h-EV-E29"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="28M-GU-1rs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HOT-wI-FNQ" kind="relationship" relationship="rootViewController" id="I3C-bG-OEs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VYD-nw-dXn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3550.7246376811595" y="-95.089285714285708"/>
         </scene>
     </scenes>
     <resources>
