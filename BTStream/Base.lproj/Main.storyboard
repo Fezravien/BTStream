@@ -32,7 +32,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="xhw-zF-pfL" userLabel="TopLogoView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXR-zL-awX">
                                         <rect key="frame" x="139" y="41" width="136" height="50"/>
@@ -46,12 +46,17 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.97255522009999995" green="0.96454697850000004" blue="0.97255057099999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="KXR-zL-awX" firstAttribute="centerX" secondItem="xhw-zF-pfL" secondAttribute="centerX" id="2nj-0z-MVE"/>
-                                    <constraint firstAttribute="height" constant="88" id="3ik-VV-F1S"/>
+                                    <constraint firstAttribute="height" constant="90" id="3ik-VV-F1S"/>
                                     <constraint firstItem="KXR-zL-awX" firstAttribute="top" secondItem="xhw-zF-pfL" secondAttribute="top" constant="41" id="CE5-D4-Y7q"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rgm-dy-YIM">
+                                <rect key="frame" x="1" y="92" width="414" height="0.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.69804400209999995" green="0.69803071019999996" blue="0.69803971050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j7j-1g-kuT"/>
@@ -79,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gs-DQ-elY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="11"/>
+            <point key="canvasLocation" x="308.69565217391306" y="27.455357142857142"/>
         </scene>
         <!--Set View Controller-->
         <scene sceneID="qwH-oF-S42">
@@ -1140,7 +1145,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9GK-SA-Kdg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1674" y="585"/>
+            <point key="canvasLocation" x="923" y="27"/>
         </scene>
         <!--설정-->
         <scene sceneID="xk6-eo-WYb">
