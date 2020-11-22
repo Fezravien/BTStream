@@ -659,8 +659,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맴버" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiu-cZ-NrD">
-                                <rect key="frame" x="10" y="5" width="34" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <rect key="frame" x="10" y="5" width="34" height="17.5"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -719,7 +719,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qjy-aV-ZBz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-846" y="-230"/>
+            <point key="canvasLocation" x="-846.37681159420299" y="-230.35714285714283"/>
         </scene>
         <!--홈1-->
         <scene sceneID="3Yi-mC-75p">
@@ -735,7 +735,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="li1-Dy-YNc">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="li1-Dy-YNc">
                                 <rect key="frame" x="5" y="30" width="404" height="190"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hvJ-IX-B5g">
@@ -790,6 +790,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="li1-Dy-YNc" id="grZ-gQ-bZx"/>
                         <outlet property="recommendTitle" destination="uXo-bE-RQj" id="xBm-6K-rwB"/>
                     </connections>
                 </viewController>
@@ -805,7 +806,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ctd-wl-YNI">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ctd-wl-YNI">
                                 <rect key="frame" x="5" y="30" width="404" height="190"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oiU-MP-vQ7">
@@ -866,6 +867,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="Ctd-wl-YNI" id="s1Z-hg-Hxc"/>
                         <outlet property="recommendTitle" destination="6gW-vq-QLF" id="cSI-Mf-wUm"/>
                     </connections>
                 </viewController>
@@ -881,7 +883,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Uyb-do-Fez">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Uyb-do-Fez">
                                 <rect key="frame" x="5" y="30" width="404" height="190"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PTY-56-HHK">
@@ -941,6 +943,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="Uyb-do-Fez" id="Aqo-QO-cQx"/>
                         <outlet property="recommendTitle" destination="xdy-76-aAd" id="oWR-Vb-7qN"/>
                     </connections>
                 </viewController>
@@ -985,7 +988,7 @@
                             <constraint firstItem="7e9-rl-Gpc" firstAttribute="leading" secondItem="9BE-qC-MJ0" secondAttribute="leading" id="Gyc-0d-ikH"/>
                             <constraint firstItem="9BE-qC-MJ0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fXw-Mm-FdG" secondAttribute="trailing" constant="20" id="PrL-OI-xne"/>
                             <constraint firstItem="alU-7o-nZH" firstAttribute="leading" secondItem="9BE-qC-MJ0" secondAttribute="leading" constant="20" id="VWg-cy-v2S"/>
-                            <constraint firstItem="9BE-qC-MJ0" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="alU-7o-nZH" secondAttribute="bottom" constant="20" id="YjE-84-4xB"/>
+                            <constraint firstItem="9BE-qC-MJ0" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="alU-7o-nZH" secondAttribute="bottom" constant="10" id="YjE-84-4xB"/>
                             <constraint firstItem="9BE-qC-MJ0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="alU-7o-nZH" secondAttribute="trailing" constant="20" id="azf-lw-wiq"/>
                             <constraint firstItem="9BE-qC-MJ0" firstAttribute="trailing" secondItem="7e9-rl-Gpc" secondAttribute="trailing" id="cWw-3A-QSY"/>
                             <constraint firstItem="fXw-Mm-FdG" firstAttribute="top" secondItem="7e9-rl-Gpc" secondAttribute="bottom" constant="30" id="uQ6-kQ-8rS"/>

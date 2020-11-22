@@ -11,22 +11,19 @@ class MembersPlayerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         getItem(param!)
-        sleep(2)
-        
-        
+   
     }
     
     func getItem(_ name:String){
         
         //AIzaSyDrv3wpQtsDgkJG-NJB-5dA0SA1CsqgmiE 혁규 key
         //AIzaSyCB_DKb9GqG4Ku8fcWAxqsvO0jFwJspxTM 재웅 key
-        let url = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDrv3wpQtsDgkJG-NJB-5dA0SA1CsqgmiE&part=snippet&type=video&maxResults=5&videoEmbeddable=true&videoSyndicated=true&q=\(name)"
+        let url = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDrv3wpQtsDgkJG-NJB-5dA0SA1CsqgmiE&part=snippet&type=video&maxResults=5&videoEmbeddable=true&videoSyndicated=true&order=viewCount&q=\(name)"
         let encodeUrl = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         let decoder = JSONDecoder()
         
-//        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.global(qos: .background).async {
             let task = URLSession.shared.dataTask(with: URL(string: encodeUrl)!) { [self] (data, response, error) in
                 do {
                     let search = try decoder.decode(Yvideo.self, from: data!)
@@ -44,7 +41,7 @@ class MembersPlayerViewController: UIViewController {
                 }
             }
                 task.resume()
-//        }
+       }
         
     }
         
@@ -64,15 +61,22 @@ extension MembersPlayerViewController: UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "memCell") as? memCell else {
             return UITableViewCell()
         }
-       
-
-        let url = URL(string:youtubeItems[0].items[indexPath.row].snippet.thumbnails.high.url)
-        let data = try? Data(contentsOf: url!)
+        if youtubeItems.isEmpty {
+            sleep(1)
+        }
         
-        cell.memimg.image = UIImage(data: data!)
-        cell.title.text = String(htmlEncodedString: youtubeItems[0].items[indexPath.row].snippet.title)
+        DispatchQueue.global(qos: .background).async {
+            let url = URL(string:self.youtubeItems[0].items[indexPath.row].snippet.thumbnails.high.url)
+            let data = try? Data(contentsOf: url!)
+        
+            DispatchQueue.main.async{
+                cell.memimg.image = UIImage(data: data!)
+                cell.title.text = String(htmlEncodedString: self.youtubeItems[0].items[indexPath.row].snippet.title)
+            }
+        }
         
         return cell
+        
     }
     
 }
@@ -100,33 +104,6 @@ class memCell:UITableViewCell {
     
 }
 
-
-struct Yvideo: Codable {
-    //let pageInfo:[String: Int]
-    let items:[Item]
-}
-
-struct Item: Codable {
-    let id: [String:String]
-    let snippet:Detail
-
-}
-struct Detail: Codable {
-    let publishedAt: String
-    let title: String
-    let description: String
-    let thumbnails:Thumbnail
-}
-
-
-struct Thumbnail: Codable {
-    let medium:ThumURL
-    let high:ThumURL
-}
-
-struct ThumURL: Codable {
-    let url:String
-}
 
 
 
