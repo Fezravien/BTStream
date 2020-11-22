@@ -21,9 +21,10 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                         let json = try JSONSerialization.jsonObject(with: datajson, options: []) as! Dictionary<String ,Any>
                         
                         let articles = json["articles"] as! Array<Dictionary<String, Any>>
-                        //         print(articles)
+                                 //print(articles)
                         
                         self.newsData = articles
+                        
                         DispatchQueue.main.async{
                             self.tableViewMain.reloadData()
                         }
