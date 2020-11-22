@@ -34,7 +34,9 @@ class UploadViewController: UIViewController, UITextViewDelegate {
 //
 //        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action:#selector(uploadPost))
 //        self.navigationItem.rightBarButtonItem = addButton
+        ImageView.layer.borderWidth = 0.5
 
+        TextView.layer.borderWidth = 0.5
         let addButton = UIButton(type: .contactAdd)
         addButton.addTarget(self, action: #selector(uploadPost), for: .touchUpInside)
         addButton.layer.position = CGPoint(x: self.view.frame.width - 50, y: 50)

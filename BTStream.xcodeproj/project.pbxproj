@@ -14,9 +14,17 @@
 		26BED1442563AF0F004F4B5A /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BED1432563AF0F004F4B5A /* UploadViewController.swift */; };
 		26BED1902563B601004F4B5A /* FeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BED18F2563B601004F4B5A /* FeedViewCell.swift */; };
 		26BED1B42563BAF8004F4B5A /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BED1B32563BAF8004F4B5A /* AddFeedViewController.swift */; };
+
 		BA12738225665D4800B168A2 /* MembersPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA12738125665D4800B168A2 /* MembersPlayerViewController.swift */; };
 		BA1273E825674CFB00B168A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA1273E725674CFB00B168A2 /* GoogleService-Info.plist */; };
 		BA99B1D2256A5D17001032EC /* YoutubeItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA99B1D1256A5D17001032EC /* YoutubeItems.swift */; };
+
+		26C0869D25690F7500ABF1EB /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C0869C25690F7500ABF1EB /* NoticeViewController.swift */; };
+		26C086A0256910AB00ABF1EB /* Type2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C0869F256910AB00ABF1EB /* Type2.swift */; };
+		26C086A7256919B000ABF1EB /* VersionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C086A6256919B000ABF1EB /* VersionViewController.swift */; };
+		26C086AA25691D2200ABF1EB /* wjdcorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C086A925691D2200ABF1EB /* wjdcorViewController.swift */; };
+		26C086AD25691D9B00ABF1EB /* Type3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C086AC25691D9B00ABF1EB /* Type3.swift */; };
+		
 		BAB6849A25554EE300BD5AF9 /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB6849925554EE300BD5AF9 /* MembersViewController.swift */; };
 		BAB684B22555645400BD5AF9 /* MembersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB684B12555645400BD5AF9 /* MembersCell.swift */; };
 		BAB684B52555737300BD5AF9 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB684B42555737300BD5AF9 /* RecommendViewController.swift */; };
@@ -42,6 +50,12 @@
 		26BED1432563AF0F004F4B5A /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		26BED18F2563B601004F4B5A /* FeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewCell.swift; sourceTree = "<group>"; };
 		26BED1B32563BAF8004F4B5A /* AddFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
+		26C0869C25690F7500ABF1EB /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
+		26C0869F256910AB00ABF1EB /* Type2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type2.swift; sourceTree = "<group>"; };
+		26C086A6256919B000ABF1EB /* VersionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionViewController.swift; sourceTree = "<group>"; };
+		26C086A925691D2200ABF1EB /* wjdcorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wjdcorViewController.swift; sourceTree = "<group>"; };
+		26C086AC25691D9B00ABF1EB /* Type3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type3.swift; sourceTree = "<group>"; };
+		26C086AF2569204B00ABF1EB /* Unknown */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unknown; sourceTree = "<group>"; };
 		26FA4C46254EA1330008BA7F /* BTStream.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BTStream.entitlements; sourceTree = "<group>"; };
 		94FD808D7390FDF06495F90F /* Pods-BTStream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BTStream.release.xcconfig"; path = "Target Support Files/Pods-BTStream/Pods-BTStream.release.xcconfig"; sourceTree = "<group>"; };
 		B0AD740ACEBA284567459C37 /* Pods_BTStream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BTStream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +143,12 @@
 				26BED1432563AF0F004F4B5A /* UploadViewController.swift */,
 				26BED18F2563B601004F4B5A /* FeedViewCell.swift */,
 				26BED1B32563BAF8004F4B5A /* AddFeedViewController.swift */,
+				26C0869C25690F7500ABF1EB /* NoticeViewController.swift */,
+				26C0869F256910AB00ABF1EB /* Type2.swift */,
+				26C086A6256919B000ABF1EB /* VersionViewController.swift */,
+				26C086A925691D2200ABF1EB /* wjdcorViewController.swift */,
+				26C086AC25691D9B00ABF1EB /* Type3.swift */,
+				26C086AF2569204B00ABF1EB /* Unknown */,
 			);
 			path = BTStream;
 			sourceTree = "<group>";
@@ -215,7 +235,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD86A78254BFFA0009351AE /* LaunchScreen.storyboard in Resources */,
+
 				BA1273E825674CFB00B168A2 /* GoogleService-Info.plist in Resources */,
+
 				BAD86A75254BFFA0009351AE /* Assets.xcassets in Resources */,
 				BAD86A73254BFF9E009351AE /* Main.storyboard in Resources */,
 			);
@@ -288,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD86A8B254C3723009351AE /* CalendarViewController.swift in Sources */,
+				26C086AD25691D9B00ABF1EB /* Type3.swift in Sources */,
 				26BED1442563AF0F004F4B5A /* UploadViewController.swift in Sources */,
 				267E9520255518CD00AEDAB2 /* NewsDetailController.swift in Sources */,
 				26BED1B42563BAF8004F4B5A /* AddFeedViewController.swift in Sources */,
@@ -297,6 +320,8 @@
 				BAD86A84254C36F6009351AE /* HomeViewController.swift in Sources */,
 				BAB684BF255598C200BD5AF9 /* RecommendCell.swift in Sources */,
 				BAD86A81254C36E3009351AE /* LoginViewController.swift in Sources */,
+				26C0869D25690F7500ABF1EB /* NoticeViewController.swift in Sources */,
+				26C086A7256919B000ABF1EB /* VersionViewController.swift in Sources */,
 				BAD86A8E254C372D009351AE /* NewsViewController.swift in Sources */,
 				BA12738225665D4800B168A2 /* MembersPlayerViewController.swift in Sources */,
 				BA99B1D2256A5D17001032EC /* YoutubeItems.swift in Sources */,
@@ -307,6 +332,8 @@
 				26BED1902563B601004F4B5A /* FeedViewCell.swift in Sources */,
 				BAD86A6E254BFF9E009351AE /* SceneDelegate.swift in Sources */,
 				BAB684B52555737300BD5AF9 /* RecommendViewController.swift in Sources */,
+				26C086AA25691D2200ABF1EB /* wjdcorViewController.swift in Sources */,
+				26C086A0256910AB00ABF1EB /* Type2.swift in Sources */,
 				26BED1412563A982004F4B5A /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

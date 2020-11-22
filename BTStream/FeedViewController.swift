@@ -27,6 +27,19 @@ class FeedViewController: UITableViewController, FusumaDelegate {
     
     
     
+    @IBAction func moveee(_ sender: Any) {
+        fusumaTintColor = UIColor.black
+        fusumaBaseTintColor = UIColor.black
+        fusumaBackgroundColor = UIColor.white
+        
+        fusuma.delegate = self
+        //            fusuma.hasVideo = false
+        fusuma.cropHeightRatio = 0.6 // Height-to-width ratio.
+        fusuma.allowMultipleSelection = false
+        fusumaSavesImage = true
+        
+        self.present(fusuma, animated: false, completion: nil)
+    }
     
     @IBAction func moveed(_ sender: Any) {
         fusumaTintColor = UIColor.black
@@ -102,6 +115,12 @@ class FeedViewController: UITableViewController, FusumaDelegate {
         refreshControl = UIRefreshControl()         //최신글을 불러 들이기 위한 refreshControl
         refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl?.addTarget(self, action: #selector(FeedViewController.refresh), for: UIControl.Event.valueChanged)              //refreshControl이 호출 될경우 TimelineViewController.refresh()가 호출 되도록한다.
+        let titleView = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width / 2 , height: (self.navigationController?.navigationBar.frame.height)!))
+        titleView.textAlignment = .center
+        titleView.textColor = .systemBlue
+        titleView.font = .systemFont(ofSize: 28, weight: .heavy)
+        titleView.text = "BTStream"
+        self.navigationItem.titleView = titleView
         
         
     }
