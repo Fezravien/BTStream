@@ -3,11 +3,13 @@ import UIKit
 class MembersViewController: UIViewController {
     
     let members = ["RM", "Jin", "SUGA", "J-hope", "Jimin", "V", "Jungkuk"]
+    var member:MembersPlayerViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
       
     }
+    
     
 }
 
@@ -38,11 +40,13 @@ extension MembersViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let mem = members[indexPath.item]
         
-        guard let members = storyboard?.instantiateViewController(identifier: "memberPlayer") else {
+        guard let mb = storyboard?.instantiateViewController(identifier: "memberPlayer") as? MembersPlayerViewController else {
             return
         }
-        present(members, animated: true, completion: nil)
+        mb.param = mem
+        present(mb, animated: true, completion: nil)
     }
+    
     
 }
 
