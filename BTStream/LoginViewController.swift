@@ -61,7 +61,13 @@ class LoginViewController: UIViewController, ASAuthorizationControllerDelegate, 
             print("User ID : \(userId)")
             print("User Email : \(email)")
             print("User Name : \((fullName))")
-     
+            guard let tb = storyboard?.instantiateViewController(identifier: "tabBar") else {
+                return
+            }
+
+            tb.modalPresentationStyle = .fullScreen
+
+            present(tb, animated: true, completion: nil)
         } else {
             print("Error : User Data Not Found")
         }
@@ -100,6 +106,14 @@ class LoginViewController: UIViewController, ASAuthorizationControllerDelegate, 
             print("User Email : \(email ?? "")")
             print("User Name : \((fullName?.givenName ?? "") + (fullName?.familyName ?? ""))")
      
+            guard let tb = storyboard?.instantiateViewController(identifier: "tabBar") else {
+                return
+            }
+
+            tb.modalPresentationStyle = .fullScreen
+
+            present(tb, animated: true, completion: nil)
+            
         default:
             break
         }

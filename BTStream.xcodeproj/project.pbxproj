@@ -14,17 +14,14 @@
 		26BED1442563AF0F004F4B5A /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BED1432563AF0F004F4B5A /* UploadViewController.swift */; };
 		26BED1902563B601004F4B5A /* FeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BED18F2563B601004F4B5A /* FeedViewCell.swift */; };
 		26BED1B42563BAF8004F4B5A /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BED1B32563BAF8004F4B5A /* AddFeedViewController.swift */; };
-
-		BA12738225665D4800B168A2 /* MembersPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA12738125665D4800B168A2 /* MembersPlayerViewController.swift */; };
-		BA1273E825674CFB00B168A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA1273E725674CFB00B168A2 /* GoogleService-Info.plist */; };
-		BA99B1D2256A5D17001032EC /* YoutubeItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA99B1D1256A5D17001032EC /* YoutubeItems.swift */; };
-
 		26C0869D25690F7500ABF1EB /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C0869C25690F7500ABF1EB /* NoticeViewController.swift */; };
 		26C086A0256910AB00ABF1EB /* Type2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C0869F256910AB00ABF1EB /* Type2.swift */; };
 		26C086A7256919B000ABF1EB /* VersionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C086A6256919B000ABF1EB /* VersionViewController.swift */; };
 		26C086AA25691D2200ABF1EB /* wjdcorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C086A925691D2200ABF1EB /* wjdcorViewController.swift */; };
 		26C086AD25691D9B00ABF1EB /* Type3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C086AC25691D9B00ABF1EB /* Type3.swift */; };
-		
+		BA12738225665D4800B168A2 /* MembersPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA12738125665D4800B168A2 /* MembersPlayerViewController.swift */; };
+		BA1273E825674CFB00B168A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA1273E725674CFB00B168A2 /* GoogleService-Info.plist */; };
+		BA99B1D2256A5D17001032EC /* YoutubeItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA99B1D1256A5D17001032EC /* YoutubeItems.swift */; };
 		BAB6849A25554EE300BD5AF9 /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB6849925554EE300BD5AF9 /* MembersViewController.swift */; };
 		BAB684B22555645400BD5AF9 /* MembersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB684B12555645400BD5AF9 /* MembersCell.swift */; };
 		BAB684B52555737300BD5AF9 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB684B42555737300BD5AF9 /* RecommendViewController.swift */; };
@@ -235,9 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD86A78254BFFA0009351AE /* LaunchScreen.storyboard in Resources */,
-
 				BA1273E825674CFB00B168A2 /* GoogleService-Info.plist in Resources */,
-
 				BAD86A75254BFFA0009351AE /* Assets.xcassets in Resources */,
 				BAD86A73254BFF9E009351AE /* Main.storyboard in Resources */,
 			);

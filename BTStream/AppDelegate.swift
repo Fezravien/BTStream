@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate// GIDSignInDelegate
 //        FirebaseApp.configure()
 //        // OAuth 2.0 클라이언트 ID
         FirebaseApp.configure()
-        GIDSignIn.sharedInstance().clientID = "484752046-5k948t1g8u9gpun1r2bvqokg7grcn9g2.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().clientID = "484752046-oim0obt2sne321jitje51v9onti2i345.apps.googleusercontent.com"
         //        GIDSignIn.sharedInstance().delegate = self
 
         return true
