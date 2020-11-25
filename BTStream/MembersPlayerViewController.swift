@@ -19,7 +19,7 @@ class MembersPlayerViewController: UIViewController {
         
         //AIzaSyDrv3wpQtsDgkJG-NJB-5dA0SA1CsqgmiE 혁규 key
         //AIzaSyCB_DKb9GqG4Ku8fcWAxqsvO0jFwJspxTM 재웅 key
-        let url = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDrv3wpQtsDgkJG-NJB-5dA0SA1CsqgmiE&part=snippet&type=video&maxResults=5&videoEmbeddable=true&videoSyndicated=true&order=viewCount&q=\(name)"
+        let url = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCB_DKb9GqG4Ku8fcWAxqsvO0jFwJspxTM&part=snippet&type=video&maxResults=5&videoEmbeddable=true&videoSyndicated=true&order=viewCount&q=\(name)"
         let encodeUrl = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         let decoder = JSONDecoder()
         
