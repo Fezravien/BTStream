@@ -52,11 +52,11 @@ class CalendarViewController: UIViewController,FSCalendarDataSource, FSCalendarD
             case dateFormatter.string(from: Date()):
                 return "오늘"
             case "2020-11-22":
-                return "출근"
+                return "유튜브 BTS VACATION LOG "
             case "2020-11-23":
-                return "지각"
+                return "V앱 RUN BTS"
             case "2020-11-24":
-                return "결근"
+                return "콘서트 BTS 월드 투어"
             default:
                 return nil
             }
