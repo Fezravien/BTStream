@@ -27,10 +27,10 @@ class RecommendViewController: UIViewController {
         } else if name == "방탄"{
             sort = "rating"
         }
-        
+      
         //AIzaSyDrv3wpQtsDgkJG-NJB-5dA0SA1CsqgmiE 혁규 key
         //AIzaSyCB_DKb9GqG4Ku8fcWAxqsvO0jFwJspxTM 재웅 key
-        let url = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDrv3wpQtsDgkJG-NJB-5dA0SA1CsqgmiE&part=snippet&type=video&maxResults=5&videoEmbeddable=true&videoSyndicated=true&order=\(sort)&q=\(name)"
+        let url = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCB_DKb9GqG4Ku8fcWAxqsvO0jFwJspxTM&part=snippet&type=video&maxResults=5&videoEmbeddable=true&videoSyndicated=true&order=\(sort)&q=\(name)"
         let encodeUrl = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         let decoder = JSONDecoder()
         
@@ -61,9 +61,7 @@ extension RecommendViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendCell", for: indexPath) as? RecommendCell else {
-            return UICollectionViewCell()
-        }
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendCell", for: indexPath) as! RecommendCell
         
             sleep(1)
      
@@ -74,9 +72,15 @@ extension RecommendViewController: UICollectionViewDataSource {
         
             DispatchQueue.main.async {
                 cell.thumbnail.image = UIImage(data: data!)
+                collectionView.layoutIfNeeded()
             }
  
         }
+        cell.setNeedsDisplay()
+        cell.setNeedsLayout()
+        cell.layoutSubviews()
+        cell.layoutIfNeeded()
+        
 
         return cell
     }

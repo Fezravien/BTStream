@@ -16,17 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BTS_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="r0Q-Xh-6aJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bts_logo2(1)" translatesAutoresizingMaskIntoConstraints="NO" id="7SZ-lk-oGq">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="r0Q-Xh-6aJ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Pa1-PE-R8g"/>
-                            <constraint firstItem="r0Q-Xh-6aJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X1Y-cT-SHD"/>
-                            <constraint firstAttribute="bottom" secondItem="r0Q-Xh-6aJ" secondAttribute="bottom" id="lFg-XT-ovY"/>
-                            <constraint firstItem="r0Q-Xh-6aJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lQi-wd-Iva"/>
+                            <constraint firstAttribute="bottom" secondItem="7SZ-lk-oGq" secondAttribute="bottom" id="3y4-bL-srp"/>
+                            <constraint firstItem="7SZ-lk-oGq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YHB-4O-AYe"/>
+                            <constraint firstItem="7SZ-lk-oGq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gR8-He-fOw"/>
+                            <constraint firstItem="7SZ-lk-oGq" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="wBW-uS-xT3"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,7 +36,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BTS_Logo" width="180" height="180"/>
+        <image name="bts_logo2(1)" width="246.33332824707031" height="437.66665649414062"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
