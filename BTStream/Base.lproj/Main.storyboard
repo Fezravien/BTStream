@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gs-DQ-elY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="308.69565217391306" y="27.455357142857142"/>
+            <point key="canvasLocation" x="312" y="11"/>
         </scene>
         <!--Set View Controller-->
         <scene sceneID="qwH-oF-S42">
@@ -189,7 +189,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tM2-y4-iId" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3610" y="-838"/>
+            <point key="canvasLocation" x="3590" y="-838"/>
         </scene>
         <!--공지사항-->
         <scene sceneID="eX9-Ni-Kci">
@@ -257,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNY-sZ-JQ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4442" y="-1538"/>
+            <point key="canvasLocation" x="4888" y="-1521"/>
         </scene>
         <!--이용약관 및 운영정책-->
         <scene sceneID="f8P-Qf-WpO">
@@ -272,14 +272,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Type3" id="ghG-dg-SF1" customClass="Type3" customModule="BTStream" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ghG-dg-SF1" id="U7E-i5-K7l">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHu-am-YgL">
-                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -315,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tq2-J0-joQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4460.8695652173919" y="-871.20535714285711"/>
+            <point key="canvasLocation" x="4888" y="-820"/>
         </scene>
         <!--버전-->
         <scene sceneID="rVr-8j-7eA">
@@ -325,12 +325,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd6-vt-GGr">
-                                <rect key="frame" x="107" y="300" width="200" height="126.5"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="100"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최신버전을 사용 중입니다. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7i-t0-CcF">
                                 <rect key="frame" x="107" y="453.5" width="180" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -343,15 +337,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTStream" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd6-vt-GGr">
+                                <rect key="frame" x="51.5" y="350.5" width="311.5" height="76"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vnc-fC-UGP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Vnc-fC-UGP" firstAttribute="bottom" secondItem="JVw-49-98g" secondAttribute="bottom" constant="300" id="4gb-Y7-Rat"/>
-                            <constraint firstItem="Vnc-fC-UGP" firstAttribute="trailing" secondItem="Fd6-vt-GGr" secondAttribute="trailing" constant="107" id="D5W-61-nih"/>
+                            <constraint firstItem="Fd6-vt-GGr" firstAttribute="centerX" secondItem="Vnc-fC-UGP" secondAttribute="centerX" id="MtQ-0N-Ztf"/>
                             <constraint firstItem="n7i-t0-CcF" firstAttribute="top" secondItem="Fd6-vt-GGr" secondAttribute="bottom" constant="27" id="Qgm-3J-7OW"/>
-                            <constraint firstItem="Fd6-vt-GGr" firstAttribute="leading" secondItem="Vnc-fC-UGP" secondAttribute="leading" constant="107" id="SND-Tg-M0Z"/>
-                            <constraint firstItem="Fd6-vt-GGr" firstAttribute="top" secondItem="Vnc-fC-UGP" secondAttribute="top" constant="212" id="Vvg-Rh-Ulj"/>
+                            <constraint firstItem="Fd6-vt-GGr" firstAttribute="top" secondItem="Vnc-fC-UGP" secondAttribute="top" constant="262.5" id="eE9-Wm-FVH"/>
                             <constraint firstItem="JVw-49-98g" firstAttribute="top" secondItem="n7i-t0-CcF" secondAttribute="bottom" constant="27" id="fg8-ap-CQB"/>
                             <constraint firstItem="JVw-49-98g" firstAttribute="leading" secondItem="Vnc-fC-UGP" secondAttribute="leading" constant="107" id="ful-FR-cb6"/>
                             <constraint firstItem="n7i-t0-CcF" firstAttribute="top" secondItem="Fd6-vt-GGr" secondAttribute="bottom" constant="27" id="l6e-EC-wbS"/>
@@ -369,7 +368,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJ2-1e-GfG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5123" y="-1538"/>
+            <point key="canvasLocation" x="5788" y="-1521"/>
         </scene>
         <!--홈-->
         <scene sceneID="rXQ-fl-MYS">
@@ -695,7 +694,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seR-Pi-35E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2439" y="585"/>
+            <point key="canvasLocation" x="1988" y="11"/>
         </scene>
         <!--News Detail Controller-->
         <scene sceneID="P0z-Tk-vTM">
@@ -730,7 +729,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRN-ku-jLP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3230" y="585"/>
+            <point key="canvasLocation" x="2742" y="11"/>
         </scene>
         <!--Members Player View Controller-->
         <scene sceneID="KW2-QW-ubg">
@@ -807,7 +806,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxt-N0-awe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-846.37681159420299" y="-789.50892857142856"/>
+            <point key="canvasLocation" x="-1610" y="-820"/>
         </scene>
         <!--Members View Controller-->
         <scene sceneID="1Ez-gz-epg">
@@ -1158,7 +1157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t01-sd-HQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="839"/>
+            <point key="canvasLocation" x="-526" y="-820"/>
         </scene>
         <!--기사-->
         <scene sceneID="fpd-PV-Vtj">
@@ -1177,7 +1176,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9GK-SA-Kdg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1078" y="27"/>
+            <point key="canvasLocation" x="1241" y="11"/>
         </scene>
         <!--설정-->
         <scene sceneID="xk6-eo-WYb">
@@ -1196,7 +1195,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CqI-jd-Eq6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2743" y="-838"/>
+            <point key="canvasLocation" x="2851" y="-838"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="Sau-fe-LoE">
@@ -1206,7 +1205,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      dfdfdfdf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lsw-RH-jbz">
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lsw-RH-jbz">
                             <rect key="frame" x="0.0" y="368" width="414" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1270,7 +1269,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vpl-tA-q3u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4460.8695652173919" y="-95.089285714285708"/>
+            <point key="canvasLocation" x="4888" y="11"/>
         </scene>
         <!--Add Feed View Controller-->
         <scene sceneID="OHf-W1-4wW">
@@ -1289,7 +1288,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKk-uB-ILe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5171.0144927536239" y="-95.089285714285708"/>
+            <point key="canvasLocation" x="5599" y="11"/>
         </scene>
         <!--Upload View Controller-->
         <scene sceneID="aKY-ZL-i1E">
@@ -1299,13 +1298,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4EW-rC-urC">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4EW-rC-urC">
                                 <rect key="frame" x="20" y="319" width="374" height="215"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no" returnKeyType="join" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="owd-c0-2Td">
                                 <rect key="frame" x="20" y="69" width="374" height="242"/>
@@ -1322,7 +1321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhu-cY-Qnu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5839.130434782609" y="-95.089285714285708"/>
+            <point key="canvasLocation" x="6267" y="11"/>
         </scene>
         <!--개발자에게 문의하기-->
         <scene sceneID="25p-Zh-52N">
@@ -1359,7 +1358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llj-V5-nQ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5121.739130434783" y="-871.20535714285711"/>
+            <point key="canvasLocation" x="5788" y="-820"/>
         </scene>
         <!--피드-->
         <scene sceneID="i5y-ed-7a7">
@@ -1378,7 +1377,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYD-nw-dXn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3550.7246376811595" y="-95.089285714285708"/>
+            <point key="canvasLocation" x="3978" y="11"/>
         </scene>
     </scenes>
     <resources>
