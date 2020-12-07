@@ -1,58 +1,20 @@
 import UIKit
 
-class RecommendViewController: UIViewController {
+class RecommendViewController: HomeViewController {
     @IBOutlet weak var recommendTitle: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    var youtubeItems:[Yvideo] = []
-   
+
+    var segue_comfirm = ""
+    var query = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    }
-    
-   
-    
-    func getItem(_ name:String){
-        var sort:String = ""
-        
-        print("*****\(name)")
-        if name == "BTS"{
-            sort = "viewCount"
-            
-        } else if name == "방탄소년단"{
-            sort = "relevance"
-            
-        } else if name == "방탄"{
-            sort = "rating"
-        }
-      
-        //AIzaSyDrv3wpQtsDgkJG-NJB-5dA0SA1CsqgmiE 혁규 key
-        //AIzaSyCB_DKb9GqG4Ku8fcWAxqsvO0jFwJspxTM 재웅 key
-        let url = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDrv3wpQtsDgkJG-NJB-5dA0SA1CsqgmiE&part=snippet&type=video&maxResults=5&videoEmbeddable=true&videoSyndicated=true&order=\(sort)&q=\(name)"
-        let encodeUrl = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        let decoder = JSONDecoder()
-        
-        DispatchQueue.global(qos: .background).async {
-            let task = URLSession.shared.dataTask(with: URL(string: encodeUrl)!) { [self] (data, response, error) in
-                do {
-                    let search = try decoder.decode(Yvideo.self, from: data!)
-                    //print("***\(search.items[0].id["videoId"]!)****")
-                    
-                    youtubeItems.append(search)
-//                    print(youtubeItems[0].pageInfo["resultsPerPage"]!)
-                    
-                    
-
-                } catch {
-                    return print("---> parsing error: \(error.localizedDescription)")
-                }
-            }
-                task.resume()
-       }
+        getItem(query)
+        collectionView.reloadData()
+        sleep(1)
         
     }
+    
 }
 
 extension RecommendViewController: UICollectionViewDataSource {
@@ -61,26 +23,39 @@ extension RecommendViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendCell", for: indexPath) as! RecommendCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendCell", for: indexPath) as! RecommendCell
         
-            sleep(1)
-     
         
-        DispatchQueue.global(qos: .background).async {
-            let url = URL(string:self.youtubeItems[0].items[indexPath.row].snippet.thumbnails.medium.url)
-            let data = try? Data(contentsOf: url!)
+        var url:URL?
+        var data:Data?
         
+        
+        if self.segue_comfirm == "new" {
             DispatchQueue.main.async {
-                cell.thumbnail.image = UIImage(data: data!)
-                collectionView.layoutIfNeeded()
+                url = URL(string: (self.new?.items[indexPath.row].snippet.thumbnails.medium.url)!)
+                data = try? Data(contentsOf: url!)
             }
- 
+            
+            
+        } else if self.segue_comfirm == "hot" {
+            DispatchQueue.main.async{
+                url = URL(string: (self.hot?.items[indexPath.row].snippet.thumbnails.medium.url)!)
+                data = try? Data(contentsOf: url!)
+            }
+            
+        } else if self.segue_comfirm == "comment"{
+            DispatchQueue.main.async{
+                url = URL(string: (self.comment?.items[indexPath.row].snippet.thumbnails.medium.url)!)
+                data = try? Data(contentsOf: url!)
+            }
+            
         }
-        cell.setNeedsDisplay()
-        cell.setNeedsLayout()
-        cell.layoutSubviews()
-        cell.layoutIfNeeded()
         
+        DispatchQueue.main.async {
+            cell.thumbnail.image = UIImage(data: data!)
+        }
+
+        //}
 
         return cell
     }
@@ -93,9 +68,25 @@ extension RecommendViewController:UICollectionViewDelegate {
             return
         }
         
-        player.titles = youtubeItems[0].items[indexPath.row].snippet.title
-        player.videoIds = youtubeItems[0].items[indexPath.row].id["videoId"]
-        player.descriptions = youtubeItems[0].items[indexPath.row].snippet.description
+        if self.segue_comfirm == "new" {
+        
+            player.titles = new?.items[indexPath.row].snippet.title
+            player.videoIds = new?.items[indexPath.row].id["videoId"]
+            player.descriptions = new?.items[indexPath.row].snippet.description
+            
+        } else if self.segue_comfirm == "hot" {
+            
+            player.titles = hot?.items[indexPath.row].snippet.title
+            player.videoIds = hot?.items[indexPath.row].id["videoId"]
+            player.descriptions = hot?.items[indexPath.row].snippet.description
+            
+        } else {
+            
+            player.titles = comment?.items[indexPath.row].snippet.title
+            player.videoIds = comment?.items[indexPath.row].id["videoId"]
+            player.descriptions = comment?.items[indexPath.row].snippet.description
+            
+        }
         
         present(player, animated: true, completion: nil)
     }
