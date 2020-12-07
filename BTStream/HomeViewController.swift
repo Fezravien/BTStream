@@ -88,7 +88,7 @@ class HomeViewController: UIViewController {
                     } else if name == "방탄"{
                         self.comment = search
                     }
-                    
+                   
                 } catch {
                     return print("---> parsing error: \(error.localizedDescription)")
                 }

@@ -10,12 +10,19 @@ class RecommendViewController: HomeViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getItem(query)
-        collectionView.reloadData()
         sleep(1)
-        
+
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+
+    
 }
+
 
 extension RecommendViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
